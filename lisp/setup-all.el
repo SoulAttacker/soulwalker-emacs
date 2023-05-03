@@ -59,7 +59,7 @@
              (setup-rainbow-delimiters)
              ;; (setup-corfu)
              (setup-company)
-             (setup-kind-icon)
+             ;; (setup-kind-icon)
              (setup-quickrun)
              (setup-yasnippet)
              ;; (setup-lsp-bridge)
