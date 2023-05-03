@@ -1,9 +1,9 @@
-;;; init-lang.el --- programming language configuration  -*- lexical-binding: t; -*-
+;;; init-company.el --- company configuration        -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023  soulwalker
 
 ;; Author: soulwalker <soulwalker@soulwalkerdeMac-Studio.local>
-;; Keywords: c
+;; Keywords: company
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -24,18 +24,20 @@
 
 ;;; Code:
 
-(require 'init-markdown)
-(require 'init-yasnippet)
-(require 'init-prog)
-(require 'init-corfu)
-(require 'init-company)
-(require 'init-python)
-(require 'init-cc)
-(require 'init-clojure)
-(require 'init-quickrun)
-(require 'init-elisp)
-(require 'init-lsp-bridge)
-(require 'init-lsp-mode)
+(defun setup-company-box ()
+  "Setup company-box."
+  (require 'company-box)
+  (company-box-mode))
 
-(provide 'init-lang)
-;;; init-lang.el ends here
+(defun setup-company ()
+  "Setup company."
+  (require 'company)
+  (require 'company-tng)
+  (setq company-minimum-prefix-length 1
+        company-transformers '(company-sort-by-occurrence))
+  (global-company-mode)
+  (company-tng-mode)
+  (setup-company-box))
+
+(provide 'init-company)
+;;; init-company.el ends here

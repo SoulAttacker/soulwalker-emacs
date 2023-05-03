@@ -220,3 +220,12 @@
 [submodule "package/spinner.el"]
 	path = package/spinner.el
 	url = https://github.com/Malabarba/spinner.el.git
+[submodule "package/company-mode"]
+	path = package/company-mode
+	url = https://github.com/company-mode/company-mode.git
+[submodule "package/company-box"]
+	path = package/company-box
+	url = https://github.com/sebastiencs/company-box.git
+[submodule "package/frame-local"]
+	path = package/frame-local
+	url = https://github.com/sebastiencs/frame-local.git

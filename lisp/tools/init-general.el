@@ -149,9 +149,12 @@
   "hr" '(restart-emacs :wk "restart-emacs")
 
   "l" '(:wk "Language")
-  "la" '(lsp-bridge-code-action :wk "code-action")
+  ;; "la" '(lsp-bridge-code-action :wk "code-action")
+  "la" '(:lsp-ui-code-actions :wk "code-action")
   "le" '(eval-buffer :wk "eval-buffer")
-  "lf" '(lsp-bridge-code-format :wk "lsp-bridge-code-format")
+  ;; "lf" '(lsp-bridge-code-format :wk "lsp-bridge-code-format")
+  "lf" '(lsp-format-buffer :wk "lsp-format-buffer")
+
   "lF" '(format-all-buffer :wk "format-all-buffer")
 
   "m" '(magit :wk "magit")
