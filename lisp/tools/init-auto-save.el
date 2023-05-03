@@ -24,10 +24,9 @@
 
 ;;; Code:
 
-;; package: auto-save
 (defun setup-auto-save ()
+  "Setup auto-save."
   (require 'auto-save)
-  (setq )
   (setq auto-save-silent t
         auto-save-delete-trailing-whitespace t)
   (auto-save-enable))
