@@ -31,7 +31,7 @@
   (require 'prog-mode)
   (setq prettify-symbols-alist soulwalker-prettify-symbols-alist
         prettify-symbols-unprettify-at-point 'right-edge)
-  (prettify-symbols-mode)
+  ;; (prettify-symbols-mode)
   (display-line-numbers-mode))
 
 

@@ -24,7 +24,6 @@
 
 ;;; Code:
 
-
 (require 'cl-macs)
 
 (defun setup-fonts ()
@@ -37,7 +36,7 @@
              when (font-installed-p font)
              return (set-face-attribute 'default nil
                                         :family font
-                                        :height 150))
+                                        :height 180))
 
     ;; Specify font for all unicode characters
     (cl-loop for font in '("Segoe UI Symbol" "Symbola" "Symbol")
