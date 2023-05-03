@@ -36,8 +36,10 @@
 
   (define-key corfu-map [tab] 'corfu-next)
   (define-key corfu-map [backtab] 'corfu-previous)
+  (define-key corfu-map [ret] 'corfu-insert)
   (global-corfu-mode)
-  (corfu-popupinfo-mode))
+  (corfu-popupinfo-mode)
+  (setup-kind-icon))
 
 
 (defun setup-kind-icon ()
