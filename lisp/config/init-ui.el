@@ -45,6 +45,9 @@
   ;; disable menu-bar
   (menu-bar-mode 1)
 
+  ;; highlight current line
+  (global-hl-line-mode)
+
   ;; title bar
   (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
   (add-to-list 'default-frame-alist '(ns-appearance . dark)))
