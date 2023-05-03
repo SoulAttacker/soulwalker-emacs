@@ -1,0 +1,222 @@
+[submodule "package/setup"]
+	path = package/setup
+	url = https://github.com/emacs-straight/setup.git
+[submodule "package/emacs-dashboard"]
+	path = package/emacs-dashboard
+	url = https://github.com/emacs-dashboard/emacs-dashboard.git
+[submodule "package/all-the-icons.el"]
+	path = package/all-the-icons.el
+	url = https://github.com/domtronn/all-the-icons.el.git
+[submodule "package/centaur-tabs"]
+	path = package/centaur-tabs
+	url = https://github.com/ema2159/centaur-tabs.git
+[submodule "package/powerline"]
+	path = package/powerline
+	url = https://github.com/milkypostman/powerline.git
+[submodule "package/evil"]
+	path = package/evil
+	url = https://github.com/emacs-evil/evil.git
+[submodule "package/evil-collection"]
+	path = package/evil-collection
+	url = https://github.com/emacs-evil/evil-collection.git
+[submodule "package/annalist.el"]
+	path = package/annalist.el
+	url = https://github.com/noctuid/annalist.el.git
+[submodule "package/highlight-indent-guides"]
+	path = package/highlight-indent-guides
+	url = https://github.com/DarthFennec/highlight-indent-guides.git
+[submodule "package/swiper"]
+	path = package/swiper
+	url = https://github.com/abo-abo/swiper.git
+[submodule "package/general.el"]
+	path = package/general.el
+	url = https://github.com/noctuid/general.el.git
+[submodule "package/posframe"]
+	path = package/posframe
+	url = https://github.com/tumashu/posframe.git
+[submodule "package/projectile"]
+	path = package/projectile
+	url = https://github.com/bbatsov/projectile.git
+[submodule "package/emacs-which-key"]
+	path = package/emacs-which-key
+	url = https://github.com/justbur/emacs-which-key.git
+[submodule "package/which-key-posframe"]
+	path = package/which-key-posframe
+	url = https://github.com/yanghaoxie/which-key-posframe.git
+[submodule "package/awesome-tray"]
+	path = package/awesome-tray
+	url = https://github.com/manateelazycat/awesome-tray.git
+[submodule "package/avy"]
+	path = package/avy
+	url = https://github.com/abo-abo/avy.git
+[submodule "package/emacs-libvterm"]
+	path = package/emacs-libvterm
+	url = https://github.com/akermu/emacs-libvterm.git
+[submodule "package/xenops"]
+	path = package/xenops
+	url = https://github.com/dandavison/xenops.git
+[submodule "package/hl-todo"]
+	path = package/hl-todo
+	url = https://github.com/tarsius/hl-todo.git
+[submodule "package/emacs-aio"]
+	path = package/emacs-aio
+	url = https://github.com/skeeto/emacs-aio.git
+[submodule "package/dash.el"]
+	path = package/dash.el
+	url = https://github.com/magnars/dash.el.git
+[submodule "package/f.el"]
+	path = package/f.el
+	url = https://github.com/rejeep/f.el.git
+[submodule "package/s.el"]
+	path = package/s.el
+	url = https://github.com/magnars/s.el.git
+[submodule "package/auctex"]
+	path = package/auctex
+	url = https://github.com/emacs-straight/auctex.git
+[submodule "package/compat"]
+	path = package/compat
+	url = https://github.com/emacs-compat/compat.git
+[submodule "package/magit"]
+	path = package/magit
+	url = https://github.com/magit/magit.git
+[submodule "package/auto-save"]
+	path = package/auto-save
+	url = https://github.com/manateelazycat/auto-save.git
+[submodule "package/orderless"]
+	path = package/orderless
+	url = https://github.com/oantolin/orderless.git
+[submodule "package/prescient.el"]
+	path = package/prescient.el
+	url = https://github.com/radian-software/prescient.el.git
+[submodule "package/vertico"]
+	path = package/vertico
+	url = https://github.com/minad/vertico.git
+[submodule "package/marginalia"]
+	path = package/marginalia
+	url = https://github.com/minad/marginalia.git
+[submodule "package/vertico-posframe"]
+	path = package/vertico-posframe
+	url = https://github.com/tumashu/vertico-posframe.git
+[submodule "package/transwin"]
+	path = package/transwin
+	url = https://github.com/jcs-elpa/transwin.git
+[submodule "package/treemacs"]
+	path = package/treemacs
+	url = https://github.com/Alexander-Miller/treemacs.git
+[submodule "package/ht.el"]
+	path = package/ht.el
+	url = https://github.com/Wilfred/ht.el.git
+[submodule "package/pfuture"]
+	path = package/pfuture
+	url = https://github.com/Alexander-Miller/pfuture.git
+[submodule "package/default-text-scale"]
+	path = package/default-text-scale
+	url = https://github.com/purcell/default-text-scale.git
+[submodule "package/flycheck"]
+	path = package/flycheck
+	url = https://github.com/flycheck/flycheck.git
+[submodule "package/rainbow-delimiters"]
+	path = package/rainbow-delimiters
+	url = https://github.com/Fanael/rainbow-delimiters.git
+[submodule "package/corfu"]
+	path = package/corfu
+	url = https://github.com/minad/corfu.git
+[submodule "package/cape"]
+	path = package/cape
+	url = https://github.com/minad/cape.git
+[submodule "package/kind-icon"]
+	path = package/kind-icon
+	url = https://github.com/jdtsmith/kind-icon.git
+[submodule "package/conda.el"]
+	path = package/conda.el
+	url = https://github.com/necaris/conda.el.git
+[submodule "package/pythonic"]
+	path = package/pythonic
+	url = https://github.com/pythonic-emacs/pythonic.git
+[submodule "package/clojure-mode"]
+	path = package/clojure-mode
+	url = https://github.com/clojure-emacs/clojure-mode.git
+[submodule "package/Cider"]
+	path = package/Cider
+	url = https://github.com/ciderapp/Cider.git
+[submodule "package/quickrun"]
+	path = package/quickrun
+	url = https://github.com/emacsorphanage/quickrun.git
+[submodule "package/rainbow-mode"]
+	path = package/rainbow-mode
+	url = https://github.com/emacsmirror/rainbow-mode.git
+[submodule "package/markdown-mode"]
+	path = package/markdown-mode
+	url = https://github.com/jrblevin/markdown-mode.git
+[submodule "package/lsp-bridge"]
+	path = package/lsp-bridge
+	url = https://github.com/manateelazycat/lsp-bridge.git
+[submodule "package/yasnippet"]
+	path = package/yasnippet
+	url = https://github.com/joaotavora/yasnippet.git
+[submodule "package/borg"]
+	path = package/borg
+	url = https://github.com/emacscollective/borg.git
+[submodule "package/closql"]
+	path = package/closql
+	url = git@github.com:emacscollective/closql.git
+[submodule "package/emacsql"]
+	path = package/emacsql
+	url = git@github.com:skeeto/emacsql.git
+[submodule "package/llama"]
+	path = package/llama
+	url = https://git.sr.ht/~tarsius/llama
+[submodule "package/epkg"]
+	path = package/epkg
+	url = git@github.com:emacscollective/epkg.git
+[submodule "package/goto-chg"]
+	path = package/goto-chg
+	url = https://github.com/emacs-evil/goto-chg.git
+[submodule "package/with-editor"]
+	path = package/with-editor
+	url = https://github.com/magit/with-editor.git
+[submodule "package/emacs-format-all-the-code"]
+	path = package/emacs-format-all-the-code
+	url = https://github.com/lassik/emacs-format-all-the-code.git
+[submodule "package/inheritenv"]
+	path = package/inheritenv
+	url = https://github.com/purcell/inheritenv.git
+[submodule "package/emacs-language-id"]
+	path = package/emacs-language-id
+	url = https://github.com/lassik/emacs-language-id.git
+[submodule "package/hydra"]
+	path = package/hydra
+	url = https://github.com/abo-abo/hydra.git
+[submodule "package/consult"]
+	path = package/consult
+	url = https://github.com/minad/consult.git
+[submodule "package/ivy-rich"]
+	path = package/ivy-rich
+	url = https://github.com/Yevgnen/ivy-rich.git
+[submodule "package/ivy-posframe"]
+	path = package/ivy-posframe
+	url = https://github.com/tumashu/ivy-posframe.git
+[submodule "package/all-the-icons-ivy-rich"]
+	path = package/all-the-icons-ivy-rich
+	url = https://github.com/seagle0128/all-the-icons-ivy-rich.git
+[submodule "package/yasnippet-snippets"]
+	path = package/yasnippet-snippets
+	url = https://github.com/AndreaCrotti/yasnippet-snippets.git
+[submodule "package/counsel-projectile"]
+	path = package/counsel-projectile
+	url = https://github.com/ericdanan/counsel-projectile.git
+[submodule "package/dap-mode"]
+	path = package/dap-mode
+	url = https://github.com/emacs-lsp/dap-mode.git
+[submodule "package/cfrs"]
+	path = package/cfrs
+	url = https://github.com/Alexander-Miller/cfrs.git
+[submodule "package/lsp-mode"]
+	path = package/lsp-mode
+	url = https://github.com/emacs-lsp/lsp-mode.git
+[submodule "package/lsp-ui"]
+	path = package/lsp-ui
+	url = https://github.com/emacs-lsp/lsp-ui.git
+[submodule "package/spinner.el"]
+	path = package/spinner.el
+	url = https://github.com/Malabarba/spinner.el.git
