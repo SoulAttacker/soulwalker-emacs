@@ -106,6 +106,7 @@
              (setup-ivy)
              (setup-swiper)
              (setup-counsel)
+             (setup-ivy-rich)
              (setup-all-the-icons-ivy-rich)
              (setup-ivy-posframe)
              (setup-magit)
