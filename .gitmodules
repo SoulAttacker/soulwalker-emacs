@@ -229,3 +229,9 @@
 [submodule "package/frame-local"]
 	path = package/frame-local
 	url = https://github.com/sebastiencs/frame-local.git
+[submodule "package/git-gutter"]
+	path = package/git-gutter
+	url = https://github.com/emacsorphanage/git-gutter.git
+[submodule "package/git-gutter-fringe"]
+	path = package/git-gutter-fringe
+	url = https://github.com/emacsorphanage/git-gutter-fringe.git

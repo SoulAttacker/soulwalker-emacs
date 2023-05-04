@@ -13,6 +13,7 @@
 (require 'init-evil)
 (require 'init-treemacs)
 (require 'init-prescient)
+(require 'init-git-gutter)
 (require 'init-which-key)
 (require 'init-general)
 

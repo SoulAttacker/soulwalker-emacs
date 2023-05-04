@@ -62,6 +62,7 @@
              (setup-quickrun)
              (setup-yasnippet)
              ;; (setup-lsp-bridge)
+             (setup-git-gutter)
              ))
 
 
