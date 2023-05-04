@@ -104,6 +104,7 @@
              (setup-default-text-scale)
              (setup-general)
              (setup-ivy)
+             (setup-ivy-rich)
              (setup-swiper)
              (setup-counsel)
              (setup-all-the-icons-ivy-rich)
