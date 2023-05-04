@@ -29,8 +29,6 @@
 (require 'init-lang)
 (require 'init-tools)
 
-
-
 ;; basic setup at startup
 (progn
   (setup-basic)
@@ -63,11 +61,13 @@
              (setup-yasnippet)
              ;; (setup-lsp-bridge)
              (setup-git-gutter)
+             (setup-tempel)
              ))
 
 
 ;; language setup
 (progn
+
   ;; cc setup
   (add-hook 'c-mode #'setup-cc-mode)
   (add-hook 'cc-mode #'setup-cc-mode)
@@ -121,6 +121,7 @@
              (setup-vterm)
              (setup-which-key)
              (setup-which-key-posframe)
+             (setup-org-mode)
              ))
 
 

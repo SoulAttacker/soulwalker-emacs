@@ -1,9 +1,9 @@
-;;; init-lang.el --- programming language configuration  -*- lexical-binding: t; -*-
+;;; init-tempel.el --- tempel configuration          -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023  soulwalker
 
 ;; Author: soulwalker <soulwalker@soulwalkerdeMac-Studio.local>
-;; Keywords: c
+;; Keywords: tempel
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -24,19 +24,17 @@
 
 ;;; Code:
 
-(require 'init-markdown)
-(require 'init-yasnippet)
-(require 'init-prog)
-(require 'init-corfu)
-(require 'init-company)
-(require 'init-python)
-(require 'init-cc)
-(require 'init-clojure)
-(require 'init-quickrun)
-(require 'init-elisp)
-(require 'init-lsp-bridge)
-(require 'init-lsp-mode)
-(require 'init-org)
 
-(provide 'init-lang)
-;;; init-lang.el ends here
+(defun setup-tempel-collection ()
+  "Setup tempel-collection.")
+
+(defun setup-tempel ()
+  "Setup tempel."
+  (require 'tempel)
+  (setq-local completion-at-point-functions
+                (cons #'tempel-expand
+                      completion-at-point-functions))
+  (tempel-abbrev-mode))
+
+(provide 'init-tempel)
+;;; init-tempel.el ends here

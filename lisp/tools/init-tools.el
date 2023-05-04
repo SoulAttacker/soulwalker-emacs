@@ -12,6 +12,7 @@
 (require 'init-transwin)
 (require 'init-evil)
 (require 'init-treemacs)
+(require 'init-tempel)
 (require 'init-prescient)
 (require 'init-git-gutter)
 (require 'init-which-key)

@@ -235,3 +235,18 @@
 [submodule "package/git-gutter-fringe"]
 	path = package/git-gutter-fringe
 	url = https://github.com/emacsorphanage/git-gutter-fringe.git
+[submodule "package/tempel"]
+	path = package/tempel
+	url = https://github.com/minad/tempel.git
+[submodule "package/tempel-collection"]
+	path = package/tempel-collection
+	url = https://github.com/Crandel/tempel-collection.git
+[submodule "package/org-bullets"]
+	path = package/org-bullets
+	url = https://github.com/sabof/org-bullets.git
+[submodule "package/org-superstar-mode"]
+	path = package/org-superstar-mode
+	url = https://github.com/integral-dw/org-superstar-mode.git
+[submodule "package/toc-org"]
+	path = package/toc-org
+	url = https://github.com/snosov1/toc-org.git
