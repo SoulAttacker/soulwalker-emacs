@@ -34,7 +34,6 @@
   (setup-basic)
   (setup-basic-ui)
   (setup-path)
-  (setup-proxy)
   (setup-all-the-icons)
   (setup-centaur-tabs)
   (setup-dashboard)

@@ -24,12 +24,20 @@
 
 ;;; Code:
 
-(defun setup-proxy ()
+(defun set-proxy ()
   "Setup network proxy."
+  (interactive)
   (setq url-proxy-services
         '(("no_proxy" . "^\\(localhost\\|10.*\\)")
           ("http" . "127.0.0.1:7890")
-          ("https" . "127.0.0.1:7890"))))
+          ("https" . "127.0.0.1:7890")))
+  (message "Proxy setup!"))
+
+(defun unset-proxy ()
+  "Unset network proxy."
+  (interactive)
+  (setq url-proxy-services nil)
+  (message "Proxy unset!"))
 
 (provide 'init-proxy)
 ;;; init-proxy.el ends here

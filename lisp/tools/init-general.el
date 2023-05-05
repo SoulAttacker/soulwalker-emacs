@@ -176,7 +176,9 @@
   "pp" '(open-soulwalker-configuration :wk "personal-config")
   "pr" '(counsel-projectile-rg :wk "projectile-rg")
   "ps" '(counsel-projectile-switch-project :wk "counsel-switch-project")
+  "pS" '(set-proxy :wk "set-proxy")
   "pR" '(projectile-replace :wk "projectile-replace")
+  "pU" '(unset-proxy :wk "unset-proxy")
 
   "t" '(:wk "Terminal")
   "tt" '(vterm-other-window :wk "vterm-other-window")
