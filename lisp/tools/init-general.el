@@ -138,8 +138,8 @@
   "e" '(treemacs :wk "treemacs")
 
   "f" '(:wk "File")
-  "ff" '(find-file :wk "find-file")
-  "fr" '(recentf :wk "recent-file")
+  "ff" '(counsel-find-file :wk "find-file")
+  "fr" '(cousel-recentf :wk "recent-file")
 
   "g" '(:wk "Generator")
   "gc" '(comment-region :wk "comment-line")
