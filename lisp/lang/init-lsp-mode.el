@@ -54,7 +54,8 @@
   (lsp-enable-which-key-integration)
   (lsp-mode)
   (lsp)
-  (setup-lsp-ui))
+  (setup-lsp-ui)
+  (setup-lsp-treemacs))
 
 (defun setup-lsp-ui ()
   "Setup lsp-ui."
@@ -66,6 +67,10 @@
         lsp-ui-sideline-enable t
         lsp-ui-sideline-show-diagnostics t)
   (lsp-ui-mode))
+
+(defun setup-lsp-treemacs ()
+  "Setup lsp-treemacs."
+  (lsp-treemacs-sync-mode 1))
 
 (provide 'init-lsp-mode)
 ;;; init-lsp-mode.el ends here

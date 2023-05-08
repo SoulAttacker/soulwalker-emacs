@@ -250,3 +250,6 @@
 [submodule "package/toc-org"]
 	path = package/toc-org
 	url = https://github.com/snosov1/toc-org.git
+[submodule "package/lsp-treemacs"]
+	path = package/lsp-treemacs
+	url = https://github.com/emacs-lsp/lsp-treemacs.git
