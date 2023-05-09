@@ -51,26 +51,34 @@
   (require 'lsp-lens)
   (require 'lsp-mode)
   (require 'lsp-modeline)
+  (require 'which-key)
   (lsp-enable-which-key-integration)
-  (lsp-mode)
-  (lsp)
-  (setup-lsp-ui)
-  (setup-lsp-treemacs))
+  ;; (add-hook 'prog-mode-hook 'lsp-mode)
+  (add-hook 'python-mode-hook #'lsp-deferred)
+  (add-hook 'c-mode-hook #'lsp-deferred)
+  (add-hook 'c++-mode-hook #'lsp-deferred)
+  (add-hook 'go-mode-hook #'lsp-deferred)
+  (with-eval-after-load 'lsp-mode
+    (setup-lsp-ui)
+    (setup-lsp-treemacs)))
 
 (defun setup-lsp-ui ()
   "Setup lsp-ui."
   (require 'lsp-ui)
-  (setq lsp-ui-doc-include-signature t
-        lsp-ui-doc-enable t
-        lsp-ui-peek-always-show t
-        lsp-ui-doc-show-with-cursor t
-        lsp-ui-sideline-enable t
-        lsp-ui-sideline-show-diagnostics t)
-  (lsp-ui-mode))
+  (with-eval-after-load 'lsp-mode
+    (setq lsp-ui-doc-include-signature t
+          lsp-ui-doc-enable t
+          lsp-ui-peek-always-show t
+          lsp-ui-doc-show-with-cursor t
+          lsp-ui-sideline-enable t
+          lsp-ui-sideline-show-diagnostics t)
+    (lsp-ui-mode)))
 
 (defun setup-lsp-treemacs ()
   "Setup lsp-treemacs."
-  (lsp-treemacs-sync-mode 1))
+  (require 'lsp-treemacs)
+  (with-eval-after-load lsp-mode
+    (lsp-treemacs-sync-mode 1)))
 
 (provide 'init-lsp-mode)
 ;;; init-lsp-mode.el ends here

@@ -31,7 +31,7 @@
         avy-all-the-windows-alt t
         avy-background t
         avy-style 'pre)
-  (avy-setup-default))
+  (add-hook 'after-init-hook #'avy-setup-default))
 
 (provide 'init-avy)
 ;;; init-avy.el ends here

@@ -27,7 +27,9 @@
   "Setup which-key."
   (require 'which-key)
   (setq which-key-idle-delay 0.3)
-  (which-key-mode))
+  (add-hook 'after-init-hook 'which-key-mode)
+  (with-eval-after-load 'which-key
+    (setup-which-key-posframe)))
 
 (defun setup-which-key-posframe ()
   "Setup which-key-posframe."

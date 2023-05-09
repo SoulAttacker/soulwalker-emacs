@@ -29,7 +29,7 @@
   (require 'xenops)
   (setq xenops-cache-directory "~/.cache/xenops/cache"
         xenops-math-image-scale-factor 1.7)
-  (xenops-mode))
+  (add-hook 'latex-mode-hook 'xenops-mode))
 
 (provide 'init-xenops)
 ;;; init-xenops.el ends here

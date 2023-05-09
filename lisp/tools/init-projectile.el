@@ -27,8 +27,10 @@
 (defun setup-projectile ()
   "Setup projectile."
   (require 'projectile)
-  (projectile-mode t)
-  (setq projectile-switch-project-action #'projectile-dired))
+  (setq projectile-switch-project-action #'projectile-dired)
+  (add-hook 'after-init-hook 'projectile-mode)
+  (with-eval-after-load 'projectile
+    (setup-counsel-projectile)))
 
 (defun setup-counsel-projectile ()
   "Setup counsel-projectile."

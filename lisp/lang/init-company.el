@@ -26,8 +26,9 @@
 
 (defun setup-company-box ()
   "Setup company-box."
-  (require 'company-box)
-  (company-box-mode))
+  (with-eval-after-load 'company
+    (require 'company-box)
+    (company-box-mode)))
 
 (defun setup-company ()
   "Setup company."
@@ -37,7 +38,8 @@
         company-transformers '(company-sort-by-occurrence))
   (global-company-mode)
   (company-tng-mode)
-  (setup-company-box))
+  (add-hook 'prog-mode-hook 'global-company-mode)
+  (add-hook 'company-mode 'company-tng-mode))
 
 (provide 'init-company)
 ;;; init-company.el ends here

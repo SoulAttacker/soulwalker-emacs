@@ -29,15 +29,14 @@
   "Setup git-gutter."
   (require 'git-gutter)
   (setq git-gutter:update-interval 0.02)
-  (git-gutter-mode))
+  (add-hook 'prog-mode-hook 'git-gutter-mode))
 
 (defun setup-git-gutter-fringe ()
   "Setup git-gutter-fringe."
   (require 'git-gutter-fringe)
   (define-fringe-bitmap 'git-gutter-fr:added [224] nil nil '(center repeated))
   (define-fringe-bitmap 'git-gutter-fr:modified [224] nil nil '(center repeated))
-  (define-fringe-bitmap 'git-gutter-fr:deleted [128 192 224 240] nil nil 'bottom)
-  )
+  (define-fringe-bitmap 'git-gutter-fr:deleted [128 192 224 240] nil nil 'bottom))
 
 
 (provide 'init-git-gutter)

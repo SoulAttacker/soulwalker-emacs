@@ -33,7 +33,7 @@
   (define-key acm-mode-map [tab] 'acm-select-next)
   (define-key acm-mode-map [backtab] 'acm-select-prev)
   (define-key acm-mode-map "\M-j" 'acm-complete)
-  (global-lsp-bridge-mode))
+  (add-hook 'prog-mode-hook 'global-lsp-bridge-mode))
 
 
 (provide 'init-lsp-bridge)

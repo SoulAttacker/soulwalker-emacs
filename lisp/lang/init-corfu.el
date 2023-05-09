@@ -37,15 +37,16 @@
   (define-key corfu-map [tab] 'corfu-next)
   (define-key corfu-map [backtab] 'corfu-previous)
   (define-key corfu-map [ret] 'corfu-insert)
-  (global-corfu-mode)
-  (corfu-popupinfo-mode)
+  (add-hook 'prog-mode-hook 'global-corfu-mode)
+  (add-hook 'prog-mode-hook 'corfu-popupinfo-mode)
   (setup-kind-icon))
 
 
 (defun setup-kind-icon ()
   "Setup kind-icon."
   (require 'kind-icon)
-  (setq kind-icon-default-face 'corfu-default)
+  (setq kind-icon-use-icons t
+        kind-icon-default-face 'corfu-default)
   (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter))
 
 

@@ -28,7 +28,7 @@
   "Setup format-all."
   (require 'format-all)
   (setq format-all-show-errors 'never)
-  (format-all-mode))
+  (add-hook 'prog-mode-hook 'format-all-mode))
 
 (provide 'init-format-all)
 ;;; init-format-all.el ends here

@@ -108,7 +108,7 @@
   (setq highlight-indent-guides-method 'character
         highlight-indent-guides-auto-character-face-perc 300
         highlight-indent-guides-reponsive 'top)
-  (highlight-indent-guides-mode))
+  (add-hook 'prog-mode-hook 'highlight-indent-guides-mode))
 
 
 (defun slogon-info ()

@@ -26,7 +26,8 @@
 
 (defun setup-rainbow-mode ()
   "Setup rainbow-mode."
-  (rainbow-mode))
+  (require 'rainbow-mode)
+  (add-hook 'prog-mode-hook 'rainbow-mode))
 
 
 (provide 'init-elisp)

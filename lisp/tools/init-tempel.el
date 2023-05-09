@@ -32,9 +32,10 @@
   "Setup tempel."
   (require 'tempel)
   (setq-local completion-at-point-functions
-                (cons #'tempel-expand
-                      completion-at-point-functions))
-  (tempel-abbrev-mode))
+              (cons #'tempel-expand
+                    completion-at-point-functions))
+  (with-eval-after-load 'corfu
+    (tempel-abbrev-mode)))
 
 (provide 'init-tempel)
 ;;; init-tempel.el ends here

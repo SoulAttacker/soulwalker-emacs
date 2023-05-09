@@ -26,12 +26,13 @@
 
 (defun setup-python-mode ()
   "init package: python-mode"
-  (setq-default python-indent-offset 4))
+  (require 'python)
+  (setq python-indent-offset 4))
 
 (defun setup-conda ()
   (require 'conda)
   (setq conda-anaconda-home "~/miniconda3")
-  (conda-env-autoactivate-mode 1))
+  (add-hook 'after-init-hook 'conda-env-autoactivate-mode))
 
 (provide 'init-python)
 ;;; init-python.el ends here

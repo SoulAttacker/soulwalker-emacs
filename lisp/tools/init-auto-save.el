@@ -30,7 +30,7 @@
   (setq auto-save-silent t
         auto-save-idle 3
         auto-save-delete-trailing-whitespace t)
-  (auto-save-enable))
+  (add-hook 'after-init-hook #'auto-save-enable))
 
 
 (provide 'init-auto-save)

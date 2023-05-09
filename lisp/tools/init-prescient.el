@@ -30,8 +30,10 @@
 
 (defun setup-ivy-prescient ()
   "Setup ivy-prescient."
+  (require 'ivy)
   (require 'ivy-prescient)
-  (ivy-prescient-mode))
+  (with-eval-after-load 'ivy
+    (ivy-prescient-mode)))
 
 
 (provide 'init-prescient)

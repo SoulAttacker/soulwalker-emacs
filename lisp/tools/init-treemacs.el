@@ -29,7 +29,8 @@
   (require 'treemacs)
   (require 'treemacs-file-management)
   (require 'cfrs)
-  (treemacs-follow-mode))
+  (add-hook 'treemacs-mode-hook 'treemacs-follow-mode)
+  (add-hook 'treemacs-mode-hook #'setup-treemacs-evil))
 
 (defun setup-treemacs-evil ()
   "init package treemacs-evil"

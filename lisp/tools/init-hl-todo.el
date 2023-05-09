@@ -35,7 +35,7 @@
     (add-to-list 'hl-todo-keyword-faces `(,keyword . "#d0bf8f")))
   (dolist (keyword '("DEBUG" "STUB"))
     (add-to-list 'hl-todo-keyword-faces `(,keyword . "#7cb8bb")))
-  (hl-todo-mode))
+  (add-hook 'prog-mode-hook 'hl-todo-mode))
 
 (provide 'init-hl-todo)
 ;;; init-hl-todo.el ends here

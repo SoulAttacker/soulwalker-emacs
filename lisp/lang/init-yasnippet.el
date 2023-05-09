@@ -33,8 +33,8 @@
   "Setup yasnippet."
   (require 'yasnippet)
   ;; (yas-reload-all)
-  ;; (add-hook 'prog-mode-hook #'yas-minor-mode)
-  (setup-yasnippet-snippets))
+  (add-hook 'prog-mode-hook 'yas-minor-mode)
+  (add-hook 'yas-minor-mode-hook #'setup-yasnippet-snippets))
 
 
 (provide 'init-yasnippet)

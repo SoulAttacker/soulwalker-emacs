@@ -46,7 +46,7 @@
 (defun setup-ivy-rich ()
   "Setup ivy-rich."
   (require 'ivy-rich)
-  (ivy-rich-mode 1))
+  (ivy-rich-mode))
 
 (defun setup-all-the-icons-ivy-rich ()
   "Setup all-the-icons-ivy-rich."
@@ -62,7 +62,7 @@
    all-the-icons-ivy-rich-project t
    ;; Maximum truncation width of annotation fields.
    all-the-icons-ivy-rich-field-width 80)
-  (all-the-icons-ivy-rich-mode 1))
+  (all-the-icons-ivy-rich-mode))
 
 
 (defun setup-ivy-posframe ()
@@ -73,7 +73,7 @@
         ivy-posframe-parameters '((left-fringe . 8)
                                   (right-fringe . 8))
         ivy-posframe-display-functions-alist '((t . ivy-posframe-display)))
-  (ivy-posframe-mode 1))
+  (ivy-posframe-mode))
 
 
 (provide 'init-ivy)

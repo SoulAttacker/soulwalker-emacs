@@ -31,26 +31,26 @@
   (require 'prog-mode)
   (setq prettify-symbols-alist soulwalker-prettify-symbols-alist
         prettify-symbols-unprettify-at-point 'right-edge)
-  (prettify-symbols-mode)
-  (display-line-numbers-mode))
+  (add-hook 'prog-mode-hook 'prettify-symbols-mode)
+  (add-hook 'prog-mode-hook 'display-line-numbers-mode))
 
 
 (defun setup-flycheck ()
   "Setup package flycheck."
   (require 'flycheck)
-  (flycheck-mode))
+  (add-hook 'prog-mode-hook 'flycheck-mode))
 
 
 (defun setup-elec-pair ()
   "Setup elec-pair."
   (setq electric-pair-inhibit-predicate 'electric-pair-conservative-inhibit)
-  (electric-pair-mode))
+  (add-hook 'prog-mode-hook 'electric-pair-mode))
 
 
 (defun setup-rainbow-delimiters ()
   "Setup rainbow-delimiters."
   (require 'rainbow-delimiters)
-  (rainbow-delimiters-mode 1))
+  (add-hook 'after-init-hook 'rainbow-delimiters-mode))
 
 (provide 'init-prog)
 ;;; init-prog.el ends here
