@@ -40,6 +40,10 @@
   (require 'flycheck)
   (add-hook 'prog-mode-hook 'flycheck-mode))
 
+(defun setup-flymake ()
+  "Setup package flymake."
+  (add-hook 'prog-mode-hook 'flymake-mode))
+
 
 (defun setup-elec-pair ()
   "Setup elec-pair."

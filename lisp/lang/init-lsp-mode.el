@@ -53,7 +53,6 @@
   (require 'lsp-modeline)
   (require 'which-key)
   (lsp-enable-which-key-integration)
-  ;; (add-hook 'prog-mode-hook 'lsp-mode)
   (add-hook 'python-mode-hook #'lsp-deferred)
   (add-hook 'c-mode-hook #'lsp-deferred)
   (add-hook 'c++-mode-hook #'lsp-deferred)
@@ -65,6 +64,7 @@
 (defun setup-lsp-ui ()
   "Setup lsp-ui."
   (require 'lsp-ui)
+  (require 'flycheck)
   (with-eval-after-load 'lsp-mode
     (setq lsp-ui-doc-include-signature t
           lsp-ui-doc-enable t
@@ -72,7 +72,8 @@
           lsp-ui-doc-show-with-cursor t
           lsp-ui-sideline-enable t
           lsp-ui-sideline-show-diagnostics t)
-    (lsp-ui-mode)))
+    (lsp-ui-mode))
+  (add-hook 'lsp-ui-mode-hook #'(lambda () (flycheck-mode -1))))
 
 (defun setup-lsp-treemacs ()
   "Setup lsp-treemacs."
