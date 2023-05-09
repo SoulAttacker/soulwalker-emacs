@@ -27,9 +27,7 @@
 (defun setup-cc-mode ()
   "Setup cc-mode."
   (require 'cc-mode)
-  (setq c-basic-offset 4)
-  (add-hook 'c-mode-hook 'cc-mode)
-  (add-hook 'c++-mode-hook 'cc-mode))
+  (setq c-basic-offset 4))
 
 (provide 'init-cc)
 ;;; init-cc.el ends here
