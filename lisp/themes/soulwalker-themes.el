@@ -668,7 +668,7 @@
     ;;;; vertico
     (vertico-current :background region :extend t)
     ;;;; vertico-posframe
-    ;;(vertico-posframe :inherit 'default)
+    (vertico-posframe :inherit 'default)
     (vertico-posframe-border :background grey)
     (vertico-posframe-border-2 :background red)
     (vertico-posframe-border-3 :background green)

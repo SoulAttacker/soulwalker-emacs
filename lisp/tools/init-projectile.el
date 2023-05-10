@@ -40,6 +40,9 @@
     (setq counsel-projectile-grep-base-command "ugrep --color=never -rnEI %s"))
   (counsel-projectile-mode))
 
+(defun setup-consult-projectile ()
+  "Setup consult-projectile."
+  (require 'consult-projectile))
 
 
 (provide 'init-projectile)

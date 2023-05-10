@@ -36,7 +36,8 @@
 (defun open-soulwalker-configuration ()
   "Open soulwalker config file."
   (interactive)
-  (counsel-find-file user-emacs-directory))
+   (let ((default-directory user-emacs-directory))
+    (call-interactively #'find-file)))
 
 
 (require 'general)
@@ -85,7 +86,10 @@
   "C-S-<up>"    '(enlarge-window :wk "enlarge-window")
 
   ;; siper
-  "/" '(swiper :wk "swiper")
+  ;; "/" '(swiper :wk "swiper")
+
+  ;; consult
+  "/" '(consult-line :wk "consult-line")
 
   ;; remap C-r
   "C-r" '(undo-redo :wk "undo-redo")
@@ -114,13 +118,15 @@
 
 ;; leader key definition, prefix is "SPC" or "C-,"
 (soulwalker-leader-def
-  "SPC" '(counsel-M-x :wk "counsel-M-x")
+  ;; "SPC" '(counsel-M-x :wk "counsel-M-x")
+  "SPC" '(execute-extended-command :wk "M-x")
   "a" '(:wk "Avy")
   "ac" '(avy-goto-char :wk "avy-goto-char")
   "aw" '(avy-goto-word-1 :wk "avy-goto-word")
 
   "b" '(:wk "Buffer")
-  "bb" '(counsel-switch-buffer :wk "switch-buffer")
+  ;; "bb" '(counsel-switch-buffer :wk "switch-buffer")
+  "bb" '(consult-buffer :wk "switch-buffer")
   "bk" '(kill-this-buffer :wk "kill-this-buffer")
   "bn" '(next-buffer :wk "next-buffer")
   "bp" '(previous-buffer :wk "previous-buffer")
@@ -138,8 +144,11 @@
   "e" '(treemacs :wk "treemacs")
 
   "f" '(:wk "File")
-  "ff" '(counsel-find-file :wk "find-file")
-  "fr" '(cousel-recentf :wk "recent-file")
+  ;; "ff" '(counsel-find-file :wk "find-file")
+  ;; "fr" '(cousel-recentf :wk "recent-file")
+
+  "ff" '(find-file :wk "find-file")
+  "fr" '(recentf :wk "recent-file")
 
   "g" '(:wk "Generator")
   "gc" '(comment-region :wk "comment-line")
@@ -150,7 +159,7 @@
 
   "l" '(:wk "Language")
   ;; "la" '(lsp-bridge-code-action :wk "code-action")
-  "la" '(:lsp-ui-code-actions :wk "code-action")
+  "la" '(lsp-ui-code-actions :wk "code-action")
   "le" '(eval-buffer :wk "eval-buffer")
   ;; "lf" '(lsp-bridge-code-format :wk "lsp-bridge-code-format")
   "lf" '(lsp-format-buffer :wk "lsp-format-buffer")
@@ -174,8 +183,8 @@
   "pc" '(projectile-compile-project :wk "projectile-compile-project")
   "pf" '(projectile-find-file :wk "projectile-find-file")
   "pp" '(open-soulwalker-configuration :wk "personal-config")
-  "pr" '(counsel-projectile-rg :wk "projectile-rg")
-  "ps" '(counsel-projectile-switch-project :wk "counsel-switch-project")
+  "pr" '(consult-ripgrep :wk "projectile-rg")
+  "ps" '(consult-projectile-switch-project :wk "counsel-switch-project")
   "pS" '(set-proxy :wk "set-proxy")
   "pR" '(projectile-replace :wk "projectile-replace")
   "pU" '(unset-proxy :wk "unset-proxy")

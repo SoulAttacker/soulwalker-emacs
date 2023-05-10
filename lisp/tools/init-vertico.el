@@ -24,34 +24,59 @@
 
 ;;; Code:
 
-;; package: vertico
-(progn 
+(defun setup-vertico ()
+  "Setup package: vertico."
   (require 'vertico)
-  (require 'vertico-posframe)
-  
   (vertico-mode)
+  (setup-vertico-posframe)
+  (setup-vertico-directory)
+  (setup-orderless)
+  (setup-consult)
+  (setup-marginalia))
+
+(defun setup-vertico-posframe ()
+  "Setup package: vertico-posframe."
+  (require 'vertico-posframe)
+  (require 'vertico-multiform)
+  (setq vertico-posframe-border-width 3
+        vertico-posframe-parameters '((left-fringe . 8)
+                                      (right-fringe . 8))
+        vertico-multiform-commands
+        '((consult-line
+           posframe
+           (vertico-posframe-poshandler . posframe-poshandler-frame-top-center)
+           (vertico-posframe-border-width . 10)
+           (vertico-posframe-fallback-mode . vertico-buffer-mode))
+          (t posframe)))
   (vertico-posframe-mode))
 
-;; package: vertico-directory
-(progn
+(defun setup-vertico-directory ()
+  "Setup package: vertico-directory"
   (require 'vertico-directory)
   (define-key vertico-map (kbd "RET") 'vertico-directory-enter)
-  (define-key vertico-map (kbd "DEL") 'vertico-directory-delete-word))
+  (define-key vertico-map (kbd "DEL") 'vertico-directory-delete-char)
+  (define-key vertico-map (kbd "M-DEL") 'vertico-directory-delete-word))
 
-;; package: orderless
-(progn
+(defun setup-orderless ()
+  "Setup package: orderless."
   (require 'orderless)
   (setq completion-styles '(orderless)))
 
-;; package: consult
-(progn
+(defun setup-consult ()
+  "Setup package: consult."
   (require 'consult)
   (global-set-key (kbd "C-s") 'consult-line))
 
-;; package: marginalia
-(progn
+(defun setup-marginalia ()
+  "Setup package: marginalia."
   (require 'marginalia)
-  (marginalia-mode 1))
+  (marginalia-mode)
+  (setup-all-the-icons-completion))
+
+(defun setup-all-the-icons-completion ()
+  "Setup package: all-the-icons-completion."
+  (require 'all-the-icons-completion)
+  (all-the-icons-completion-mode))
 
 (provide 'init-vertico)
 ;;; init-vertico.el ends here

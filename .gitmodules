@@ -253,3 +253,9 @@
 [submodule "package/lsp-treemacs"]
 	path = package/lsp-treemacs
 	url = https://github.com/emacs-lsp/lsp-treemacs.git
+[submodule "package/all-the-icons-completion"]
+	path = package/all-the-icons-completion
+	url = https://github.com/iyefrat/all-the-icons-completion.git
+[submodule "package/consult-projectile"]
+	path = package/consult-projectile
+	url = https://gitlab.com/OlMon/consult-projectile.git
