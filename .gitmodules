@@ -259,3 +259,6 @@
 [submodule "package/consult-projectile"]
 	path = package/consult-projectile
 	url = https://gitlab.com/OlMon/consult-projectile.git
+[submodule "package/sort-tab"]
+	path = package/sort-tab
+	url = https://github.com/manateelazycat/sort-tab.git

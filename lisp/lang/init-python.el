@@ -32,7 +32,8 @@
 (defun setup-conda ()
   (require 'conda)
   (setq conda-anaconda-home "~/miniconda3")
-  (add-hook 'after-init-hook 'conda-env-autoactivate-mode))
+  (conda-env-activate 'base))
+  ;; (add-hook 'python-mode-hook 'conda-env-autoactivate-mode))
 
 (provide 'init-python)
 ;;; init-python.el ends here

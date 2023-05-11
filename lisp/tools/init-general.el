@@ -189,6 +189,9 @@
 
   "v" '(evil-window-vsplit :wk "window-vsplit")
   "s" '(evil-window-split :wk "window-split")
+
+  "[" '(sort-tab-select-prev-tab :wk "prev-tab")
+  "]" '(sort-tab-select-next-tab :wk "next-tab")
   )
 
 (provide 'init-general)
