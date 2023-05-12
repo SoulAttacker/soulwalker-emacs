@@ -32,6 +32,7 @@
         corfu-auto t
         corfu-auto-prefix 1
         corfu-popupinfo-delay 0.1
+        corfu-auto-delay 0.1
         corfu-preselect 'prompt)
 
   (define-key corfu-map [tab] 'corfu-next)
