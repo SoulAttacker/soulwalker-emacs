@@ -95,6 +95,7 @@
 (setup-which-key)
 (setup-which-key-posframe)
 (setup-org-mode)
+(setup-popper)
 
 
 (provide 'setup-all)

@@ -44,7 +44,18 @@
 ;; global key binding
 (general-define-key
  "M--" 'default-text-scale-decrease
- "M-=" 'default-text-scale-increase)
+ "M-=" 'default-text-scale-increase
+ "C-S-<left>"  '(shrink-window-horizontally :wk "shrink-window-horizontally")
+ "C-S-<right>" '(enlarge-window-horizontally :wk "enlarge-window-horizontally")
+ "C-S-<down>"  '(shrink-window :wk "shrink-window")
+ "C-S-<up>"    '(enlarge-window :wk "enlarge-window")
+ "C-a" '(move-beginning-of-line :wk "move-begin")
+ "C-e" '(move-end-of-line :wk "move-end")
+ "C-`" '(popper-toggle-latest :wk "popper-toggle-latest")
+ "M-`" '(popper-cycle :wk "popper-cycle")
+ "C-M-`" '(popper-toggle-type :wk "popper-toggle-type")
+ )
+
 
 ;; func to define soulwalker leader-key keymap
 (general-create-definer soulwalker-leader-def
@@ -80,10 +91,7 @@
   ;; activate C-a C-e in insert state
   "C-a" '(move-beginning-of-line :wk "move-begin")
   "C-e" '(move-end-of-line :wk "move-end")
-  "C-S-<left>"  '(shrink-window-horizontally :wk "shrink-window-horizontally")
-  "C-S-<right>" '(enlarge-window-horizontally :wk "enlarge-window-horizontally")
-  "C-S-<down>"  '(shrink-window :wk "shrink-window")
-  "C-S-<up>"    '(enlarge-window :wk "enlarge-window")
+
 
   ;; siper
   "/" '(swiper :wk "swiper")
@@ -93,24 +101,6 @@
 
   ;; command for macos
   "M-s" '(save-buffer :wk "save-file")
-
-
-  ;; for lsp-bridge
-  ;; "g" '(:wk "Goto")
-  ;; "gd" '(lsp-bridge-find-def :wk "peek-definition")
-  ;; "gh" '(lsp-bridge-find-references :wk "peek-references")
-  ;; "gi" '(lsp-bridge-find-impl :wk "peek-implementation")
-  ;; "gr" '(lsp-bridge-rename :wk "rename-symbols")
-  ;; "gD" '(lsp-bridge-find-def-other-window :wk "goto-definition")
-
-  ;; for lsp-mode
-  "g" '(:wk "Goto")
-  "gd" '(lsp-ui-peek-find-definitions :wk "peek-definition")
-  "gh" '(lsp-ui-peek-find-references :wk "peek-references")
-  "gi" '(lsp-ui-peek-find-implementation :wk "peek-implementation")
-  "gr" '(lsp-rename :wk "rename-symbols")
-  "gs" '(lsp-ui-peek-find-workspace-symbol :wk "peek-symbols")
-  "gD" '(evil-goto-definition :wk "goto-definition")
   )
 
 ;; leader key definition, prefix is "SPC" or "C-,"
@@ -155,6 +145,16 @@
   "le" '(eval-buffer :wk "eval-buffer")
   ;; "lf" '(lsp-bridge-code-format :wk "lsp-bridge-code-format")
   "lf" '(lsp-format-buffer :wk "lsp-format-buffer")
+  ;; for lsp-mode
+  "l" '(:wk "Goto")
+  "ld" '(lsp-find-definition :wk "peek-definition")
+  "lh" '(lsp-find-references :wk "peek-references")
+  "li" '(lsp-find-implementation :wk "peek-implementation")
+  "lr" '(lsp-rename :wk "rename-symbols")
+  "ls" '(lsp-ui-peek-find-workspace-symbol :wk "peek-symbols")
+  "lD" '(lsp-ui-peek-find-definitions :wk "peek-definition")
+  "lH" '(lsp-ui-peek-find-references :wk "peek-references")
+  "lI" '(lsp-ui-peek-find-implementation :wk "peek-implementation")
 
   "lF" '(format-all-buffer :wk "format-all-buffer")
 

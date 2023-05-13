@@ -262,3 +262,6 @@
 [submodule "package/sort-tab"]
 	path = package/sort-tab
 	url = https://github.com/manateelazycat/sort-tab.git
+[submodule "package/popper"]
+	path = package/popper
+	url = https://github.com/karthink/popper.git

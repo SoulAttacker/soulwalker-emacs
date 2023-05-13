@@ -15,6 +15,7 @@
 (require 'init-tempel)
 (require 'init-prescient)
 (require 'init-git-gutter)
+(require 'init-popper)
 (require 'init-which-key)
 (require 'init-general)
 
