@@ -225,7 +225,7 @@ determine the exact padding."
   ((org-quote &override) :background bg-alt)
   ((org-block-begin-line &override) :foreground comments :background bg)
    ;;;; mic-paren
-  ((paren-face-match &override) :background magenta :weight 'ultra-bold)
+  ((paren-face-match &override) :background base5 :weight 'ultra-bold)
    ;;;; solaire-mode
   (solaire-mode-line-face
    :inherit 'mode-line
