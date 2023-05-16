@@ -265,3 +265,6 @@
 [submodule "package/popper"]
 	path = package/popper
 	url = https://github.com/karthink/popper.git
+[submodule "package/elisp-tree-sitter"]
+	path = package/elisp-tree-sitter
+	url = https://github.com/emacs-tree-sitter/elisp-tree-sitter

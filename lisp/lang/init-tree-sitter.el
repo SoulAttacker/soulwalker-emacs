@@ -1,9 +1,9 @@
-;;; init-lang.el --- programming language configuration  -*- lexical-binding: t; -*-
+;;; init-tree-sitter.el --- tree-sitter configuration  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023  soulwalker
 
 ;; Author: soulwalker <soulwalker@soulwalkerdeMac-Studio.local>
-;; Keywords: c
+;; Keywords: tree-sitter
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -24,20 +24,21 @@
 
 ;;; Code:
 
-(require 'init-markdown)
-(require 'init-yasnippet)
-(require 'init-prog)
-(require 'init-corfu)
-(require 'init-company)
-(require 'init-python)
-(require 'init-cc)
-(require 'init-clojure)
-(require 'init-quickrun)
-(require 'init-elisp)
-(require 'init-lsp-bridge)
-(require 'init-lsp-mode)
-(require 'init-org)
-(require 'init-tree-sitter)
 
-(provide 'init-lang)
-;;; init-lang.el ends here
+(defun setup-tree-sitter ()
+  "Setup package: tree-sitter."
+  (require 'tree-sitter)
+  (require 'tree-sitter-hl)
+  (require 'tree-sitter-langs)
+  (require 'tree-sitter-debug)
+  (require 'tree-sitter-query)
+  (add-hook 'python-mode-hook 'tree-sitter-mode)
+  (add-hook 'c-mode-hook 'tree-sitter-mode)
+  (add-hook 'c++-mode-hook 'tree-sitter-mode)
+  (add-hook 'python-mode-hook 'tree-sitter-hl-mode)
+  (add-hook 'c-mode-hook 'tree-sitter-hl-mode)
+  (add-hook 'c++-mode-hook 'tree-sitter-hl-mode))
+
+
+(provide 'init-tree-sitter)
+;;; init-treesitter.el ends here

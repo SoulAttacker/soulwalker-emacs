@@ -69,6 +69,7 @@
 (setup-python-mode)
 (setup-conda)
 (setup-lsp-mode)
+(setup-tree-sitter)
 
 ;; tool setup
 (setup-auto-save)
