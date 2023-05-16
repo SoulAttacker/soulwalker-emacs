@@ -39,5 +39,8 @@
   (setq url-proxy-services nil)
   (message "Proxy unset!"))
 
+;; default set proxy
+(set-proxy)
+
 (provide 'init-proxy)
 ;;; init-proxy.el ends here
