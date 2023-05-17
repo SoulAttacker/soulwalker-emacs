@@ -268,3 +268,6 @@
 [submodule "package/elisp-tree-sitter"]
 	path = package/elisp-tree-sitter
 	url = https://github.com/emacs-tree-sitter/elisp-tree-sitter
+[submodule "package/evil-goggles"]
+	path = package/evil-goggles
+	url = https://github.com/edkolev/evil-goggles

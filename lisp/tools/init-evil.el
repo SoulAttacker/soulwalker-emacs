@@ -34,10 +34,18 @@
   (require 'evil)
   (evil-mode))
 
+(defun setup-evil-goggles ()
+  "Setup evil-goggles."
+  (require 'evil-goggles)
+  (evil-goggles-mode)
+  (evil-goggles-use-diff-faces))
+
 (defun setup-evil-collection ()
   "Setup evil-collection."
   (require 'evil-collection)
-  (evil-collection-init))
+  (evil-collection-init)
+  (setup-evil-goggles))
+
 
 
 (provide 'init-evil)
