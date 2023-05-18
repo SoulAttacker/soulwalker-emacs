@@ -41,6 +41,7 @@
 
 
 (require 'general)
+
 ;; global key binding
 (general-define-key
  "M--" 'default-text-scale-decrease
@@ -54,6 +55,8 @@
  "C-`" '(popper-toggle-latest :wk "popper-toggle-latest")
  "M-`" '(popper-cycle :wk "popper-cycle")
  "C-M-`" '(popper-toggle-type :wk "popper-toggle-type")
+ "M-[" '(sort-tab-select-prev-tab :wk "prev-tab")
+ "M-]" '(sort-tab-select-next-tab :wk "prev-tab")
  )
 
 
@@ -190,8 +193,7 @@
   "v" '(evil-window-vsplit :wk "window-vsplit")
   "s" '(evil-window-split :wk "window-split")
 
-  "[" '(sort-tab-select-prev-tab :wk "prev-tab")
-  "]" '(sort-tab-select-next-tab :wk "next-tab")
+
   )
 
 (provide 'init-general)
