@@ -117,7 +117,12 @@
     (global-set-key (kbd "≈") 'execute-extended-command)) ; Replace ≈ with whatever your option-x produces)
 
   ;; replace yes-or-no with y-or-n
-  (defalias 'yes-or-no-p 'y-or-n-p))
+  (defalias 'yes-or-no-p 'y-or-n-p)
+
+  ;; winner-mode
+  (if soulwalker-active-winner
+      (winner-mode 1))
+  )
 
 (provide 'init-basic)
 ;;; init-basic.el ends here

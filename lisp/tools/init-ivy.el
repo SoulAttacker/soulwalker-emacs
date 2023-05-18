@@ -28,7 +28,14 @@
   "Setup ivy."
   (require 'ivy)
   (setq ivy-count-format "(%d/%d) ")
-  (ivy-mode))
+  ;; (add-hook 'after-init-hook 'ivy-mode)
+  (ivy-mode)
+  (setup-swiper)
+  (setup-counsel)
+  (setup-ivy-rich)
+  (setup-all-the-icons-ivy-rich)
+  (if (eq soulwalker-display-mode 'posframe)
+      (setup-ivy-posframe)))
 
 
 (defun setup-swiper ()

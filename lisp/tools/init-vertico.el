@@ -28,7 +28,8 @@
   "Setup package: vertico."
   (require 'vertico)
   (vertico-mode)
-  (setup-vertico-posframe)
+  (if (eq soulwalker-display-mode 'posframe)
+      (setup-vertico-posframe))
   (setup-vertico-directory)
   (setup-orderless)
   (setup-consult)

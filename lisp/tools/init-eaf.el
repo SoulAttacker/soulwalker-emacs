@@ -1,9 +1,9 @@
-;;; init-which-key.el --- which-key configuration    -*- lexical-binding: t; -*-
+;;; init-eaf.el --- eaf configuration                -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023  soulwalker
 
 ;; Author: soulwalker <soulwalker@soulwalkerdeMac-Studio.local>
-;; Keywords: which-key
+;; Keywords: eaf
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -23,18 +23,25 @@
 ;;
 
 ;;; Code:
-(defun setup-which-key ()
-  "Setup which-key."
-  (require 'which-key)
-  (setq which-key-idle-delay 0.3)
-  (add-hook 'after-init-hook 'which-key-mode)
-  (if (eq soulwalker-display-mode 'posframe)
-      (add-hook 'which-key-mode-hook #'setup-which-key-posframe)))
 
-(defun setup-which-key-posframe ()
-  "Setup which-key-posframe."
-    (require 'which-key-posframe)
-    (which-key-posframe-mode))
+(add-to-list 'load-path "~/tools/emacs-application-framework")
 
-(provide 'init-which-key)
-;;; init-which-key.el ends here
+(require 'eaf)
+(require 'eaf-music-player)
+(require 'eaf-js-video-player)
+(require 'eaf-rss-reader)
+(require 'eaf-image-viewer)
+(require 'eaf-pdf-viewer)
+(require 'eaf-browser)
+(require 'eaf-markdown-previewer)
+(require 'eaf-file-browser)
+(require 'eaf-file-manager)
+(require 'eaf-mindmap)
+(require 'eaf-video-player)
+(require 'eaf-org-previewer)
+(require 'eaf-netease-cloud-music)
+(require 'eaf-system-monitor)
+(require 'eaf-markmap)
+
+(provide 'init-eaf)
+;;; init-eaf.el ends here

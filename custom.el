@@ -1,9 +1,9 @@
-;;; init-which-key.el --- which-key configuration    -*- lexical-binding: t; -*-
+;;; custom.el --- custom global configuration        -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023  soulwalker
 
 ;; Author: soulwalker <soulwalker@soulwalkerdeMac-Studio.local>
-;; Keywords: which-key
+;; Keywords: global vars
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -23,18 +23,10 @@
 ;;
 
 ;;; Code:
-(defun setup-which-key ()
-  "Setup which-key."
-  (require 'which-key)
-  (setq which-key-idle-delay 0.3)
-  (add-hook 'after-init-hook 'which-key-mode)
-  (if (eq soulwalker-display-mode 'posframe)
-      (add-hook 'which-key-mode-hook #'setup-which-key-posframe)))
 
-(defun setup-which-key-posframe ()
-  "Setup which-key-posframe."
-    (require 'which-key-posframe)
-    (which-key-posframe-mode))
+(setq soulwalker-active-winner t)                  ; wheather to active winner mode
+(setq soulwalker-display-mode 'minibuffer)       ; completion display in `childframe` or `minibuffer`
 
-(provide 'init-which-key)
-;;; init-which-key.el ends here
+
+(provide 'custom)
+;;; custom.el ends here
