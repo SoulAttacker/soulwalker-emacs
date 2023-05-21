@@ -27,6 +27,7 @@
 (defun setup-lsp-bridge ()
   "init package: lsp-bridge"
   (require 'lsp-bridge)
+  (require 'orderless)
   (setq lsp-bridge-python-command "~/miniconda3/bin/python"
         lsp-bridge-python-lsp-server 'pylsp
         lsp-bridge-c-lsp-server 'clangd
@@ -35,9 +36,11 @@
         lsp-bridge-enable-hover-diagnostic t
         lsp-bridge-enable-org-babel t
 
+        acm-candidate-match-function 'orderless-regexp
         acm-enable-doc t
         acm-enable-icon t
         acm-enable-doc-markdown-render 'async
+        acm-enable-tabnine nil
         acm-enable-search-file-words t
         acm-enable-yas t
         acm-backend-lsp-enable-auto-import t
