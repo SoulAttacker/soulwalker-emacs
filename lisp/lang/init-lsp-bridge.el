@@ -29,10 +29,21 @@
   (require 'lsp-bridge)
   (setq lsp-bridge-python-command "~/miniconda3/bin/python"
         lsp-bridge-python-lsp-server 'pylsp
-        lsp-bridge-c-lsp-server 'clangd)
+        lsp-bridge-c-lsp-server 'clangd
+
+        lsp-bridge-enable-diagnostics t
+        lsp-bridge-enable-hover-diagnostic t
+        lsp-bridge-enable-org-babel t
+
+        acm-enable-doc t
+        acm-enable-icon t
+        acm-enable-doc-markdown-render 'async
+        acm-enable-search-file-words t
+        acm-enable-yas t
+        acm-backend-lsp-enable-auto-import t
+        acm-enable-preview t)
   (define-key acm-mode-map [tab] 'acm-select-next)
   (define-key acm-mode-map [backtab] 'acm-select-prev)
-  (define-key acm-mode-map "\M-j" 'acm-complete)
   (add-hook 'prog-mode-hook 'global-lsp-bridge-mode))
 
 

@@ -52,11 +52,11 @@
 (setup-flymake)
 (setup-elec-pair)
 (setup-rainbow-delimiters)
-(setup-corfu)
+;; (setup-corfu)
 ;; (setup-company)
 (setup-quickrun)
 (setup-yasnippet)
-;; (setup-lsp-bridge)
+(setup-lsp-bridge)
 (setup-git-gutter)
 (setup-tempel)
 
