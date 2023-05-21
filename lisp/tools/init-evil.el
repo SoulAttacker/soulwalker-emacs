@@ -37,6 +37,7 @@
 (defun setup-evil-goggles ()
   "Setup evil-goggles."
   (require 'evil-goggles)
+  (setq evil-goggles-duration 0.1)
   (evil-goggles-mode)
   (evil-goggles-use-diff-faces))
 

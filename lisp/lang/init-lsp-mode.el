@@ -67,7 +67,7 @@
   (require 'flycheck)
   (with-eval-after-load 'lsp-mode
     (setq lsp-ui-doc-include-signature t
-          lsp-ui-doc-enable t
+          lsp-ui-doc-enable nil
           lsp-ui-peek-always-show t
           lsp-ui-doc-show-with-cursor t
           lsp-ui-sideline-enable t
