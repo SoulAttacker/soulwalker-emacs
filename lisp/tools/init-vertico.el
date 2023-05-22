@@ -26,14 +26,17 @@
 
 (defun setup-vertico ()
   "Setup package: vertico."
-  (require 'vertico)
-  (vertico-mode)
-  (if (eq soulwalker-display-mode 'posframe)
-      (setup-vertico-posframe))
-  (setup-vertico-directory)
-  (setup-orderless)
-  (setup-consult)
-  (setup-marginalia))
+  (if (eq soulwalker-completion-mechanism 'vertico)
+      (progn
+        (require 'vertico)
+        (vertico-mode)
+        (if (eq soulwalker-display-mode 'posframe)
+            (setup-vertico-posframe))
+        (setup-vertico-directory)
+        (setup-orderless)
+        (setup-consult)
+        (setup-marginalia))))
+
 
 (defun setup-vertico-posframe ()
   "Setup package: vertico-posframe."

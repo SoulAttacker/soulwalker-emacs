@@ -32,14 +32,17 @@
 
 (defun setup-company ()
   "Setup company."
-  (require 'company)
-  (require 'company-tng)
-  (setq company-minimum-prefix-length 1
-        company-transformers '(company-sort-by-occurrence))
-  (global-company-mode)
-  (company-tng-mode)
-  (add-hook 'prog-mode-hook 'global-company-mode)
-  (add-hook 'company-mode 'company-tng-mode))
+  (if (eq soulwalker-completion-frontend 'company)
+      (progn
+        (require 'company)
+        (require 'company-tng)
+        (setq company-minimum-prefix-length 1
+              company-transformers '(company-sort-by-occurrence))
+        (global-company-mode)
+        (company-tng-mode)
+        (add-hook 'prog-mode-hook 'global-company-mode)
+        (add-hook 'company-mode 'company-tng-mode)
+        (setup-company-box))))
 
 (provide 'init-company)
 ;;; init-company.el ends here

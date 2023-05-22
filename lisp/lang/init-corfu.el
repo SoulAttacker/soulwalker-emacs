@@ -26,21 +26,24 @@
 
 (defun setup-corfu ()
   "Setup corfu."
-  (require 'corfu)
-  (require 'corfu-popupinfo)
-  (setq corfu-cycle t
-        corfu-auto t
-        corfu-auto-prefix 1
-        corfu-popupinfo-delay 0.1
-        corfu-auto-delay 0.1
-        corfu-preselect 'prompt)
+  (if (and (eq soulwalker-completion-frontend 'corfu) (not (eq soulwalker-lsp-client 'lsp-bridge)))
+      (progn
+        (require 'corfu)
+        (require 'corfu-popupinfo)
+        (setq corfu-cycle t
+              corfu-auto t
+              corfu-auto-prefix 1
+              corfu-popupinfo-delay 0.1
+              corfu-auto-delay 0.1
+              corfu-preselect 'prompt)
 
-  (define-key corfu-map [tab] 'corfu-next)
-  (define-key corfu-map [backtab] 'corfu-previous)
-  (define-key corfu-map [ret] 'corfu-insert)
-  (add-hook 'prog-mode-hook 'global-corfu-mode)
-  (add-hook 'prog-mode-hook 'corfu-popupinfo-mode)
-  (setup-kind-icon))
+        (define-key corfu-map [tab] 'corfu-next)
+        (define-key corfu-map [backtab] 'corfu-previous)
+        (define-key corfu-map [ret] 'corfu-insert)
+        (add-hook 'prog-mode-hook 'global-corfu-mode)
+        (add-hook 'prog-mode-hook 'corfu-popupinfo-mode)
+        (setup-kind-icon)
+        (setup-cape))))
 
 
 (defun setup-kind-icon ()
@@ -49,6 +52,11 @@
   (setq kind-icon-use-icons t
         kind-icon-default-face 'corfu-default)
   (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter))
+
+(defun setup-cape ()
+  "Setup cape."
+  (require 'cape)
+  (add-to-list 'completion-at-point-functions #'cape-file))
 
 
 (provide 'init-corfu)

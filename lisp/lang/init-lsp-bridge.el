@@ -26,28 +26,30 @@
 
 (defun setup-lsp-bridge ()
   "init package: lsp-bridge"
-  (require 'lsp-bridge)
-  (require 'orderless)
-  (setq lsp-bridge-python-command "~/miniconda3/bin/python"
-        lsp-bridge-python-lsp-server 'pylsp
-        lsp-bridge-c-lsp-server 'clangd
+  (if (eq soulwalker-lsp-client 'lsp-bridge)
+      (progn
+        (require 'lsp-bridge)
+        (require 'orderless)
+        (setq lsp-bridge-python-command "~/miniconda3/bin/python"
+              lsp-bridge-python-lsp-server 'pylsp
+              lsp-bridge-c-lsp-server 'clangd
 
-        lsp-bridge-enable-diagnostics t
-        lsp-bridge-enable-hover-diagnostic t
-        lsp-bridge-enable-org-babel t
+              lsp-bridge-enable-diagnostics t
+              lsp-bridge-enable-hover-diagnostic t
+              lsp-bridge-enable-org-babel t
 
-        acm-candidate-match-function 'orderless-regexp
-        acm-enable-doc t
-        acm-enable-icon t
-        acm-enable-doc-markdown-render 'async
-        acm-enable-tabnine nil
-        acm-enable-search-file-words t
-        acm-enable-yas t
-        acm-backend-lsp-enable-auto-import t
-        acm-enable-preview t)
-  (define-key acm-mode-map [tab] 'acm-select-next)
-  (define-key acm-mode-map [backtab] 'acm-select-prev)
-  (add-hook 'prog-mode-hook 'global-lsp-bridge-mode))
+              acm-candidate-match-function 'orderless-regexp
+              acm-enable-doc t
+              acm-enable-icon t
+              acm-enable-doc-markdown-render 'async
+              acm-enable-tabnine nil
+              acm-enable-search-file-words t
+              acm-enable-yas t
+              acm-backend-lsp-enable-auto-import t
+              acm-enable-preview t)
+        (define-key acm-mode-map [tab] 'acm-select-next)
+        (define-key acm-mode-map [backtab] 'acm-select-prev)
+        (add-hook 'prog-mode-hook 'global-lsp-bridge-mode))))
 
 
 (provide 'init-lsp-bridge)

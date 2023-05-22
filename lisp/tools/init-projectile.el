@@ -34,15 +34,21 @@
 
 (defun setup-counsel-projectile ()
   "Setup counsel-projectile."
-  (require 'counsel-projectile)
-  (setq counsel-projectile-grep-initial-input '(ivy-thing-at-point))
-  (when (executable-find "ugrep")
-    (setq counsel-projectile-grep-base-command "ugrep --color=never -rnEI %s"))
-  (counsel-projectile-mode))
+  (if (eq soulwalker-completion-mechanism 'ivy)
+      (progn
+        (require 'counsel-projectile)
+        (setq counsel-projectile-grep-initial-input '(ivy-thing-at-point))
+        (when (executable-find "ugrep")
+          (setq counsel-projectile-grep-base-command "ugrep --color=never -rnEI %s"))
+        (counsel-projectile-mode))))
+
 
 (defun setup-consult-projectile ()
   "Setup consult-projectile."
-  (require 'consult-projectile))
+  (if (eq soulwalker-completion-mechanism 'vertico)
+      (progn
+        (require 'consult-projectile))))
+
 
 
 (provide 'init-projectile)

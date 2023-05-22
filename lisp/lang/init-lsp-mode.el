@@ -27,39 +27,41 @@
 
 (defun setup-lsp-mode ()
   "Setup lsp-mode."
-  (setq lsp-auto-guess-root t
-	    lsp-log-io nil
-        lsp-headerline-breadcrumb-segments '(project file symbols)
-	    lsp-headerline-breadcrumb-enable nil
-        lsp-headerline-breadcrumb-icons-enable nil
-        lsp-signature-auto-activate t
-        lsp-modeline-diagnostics-enable nil
-        lsp-modeline-workspace-status-enable nil
+  (if (eq soulwalker-lsp-client 'lsp-mode)
+      (progn
+        (setq lsp-auto-guess-root t
+	          lsp-log-io nil
+              lsp-headerline-breadcrumb-segments '(project file symbols)
+	          lsp-headerline-breadcrumb-enable nil
+              lsp-headerline-breadcrumb-icons-enable nil
+              lsp-signature-auto-activate t
+              lsp-modeline-diagnostics-enable nil
+              lsp-modeline-workspace-status-enable nil
 
-        ;; python pylsp plugins setup
-        ;; pydocstyle == 6.1.1 so slow
-        lsp-pylsp-plugins-flake8-enabled nil
-        lsp-pylsp-plugins-autopep8-enabled t
-        lsp-pylsp-plugins-pydocstyle-enabled t
-        lsp-pylsp-plugins-pydocstyle-max-line-length 300
-        lsp-pylsp-plugins-pycodestyle-ignore '("E501" "E203" "E226" "E302" "E71")
+              ;; python pylsp plugins setup
+              ;; pydocstyle == 6.1.1 so slow
+              lsp-pylsp-plugins-flake8-enabled nil
+              lsp-pylsp-plugins-autopep8-enabled t
+              lsp-pylsp-plugins-pydocstyle-enabled t
+              lsp-pylsp-plugins-pydocstyle-max-line-length 300
+              lsp-pylsp-plugins-pycodestyle-ignore '("E501" "E203" "E226" "E302" "E71")
 
-        ;; cpp clangd setup
-        c-basic-offset 4
-        lsp-clangd-binary-path "/usr/bin/clangd")
+              ;; cpp clangd setup
+              c-basic-offset 4
+              lsp-clangd-binary-path "/usr/bin/clangd")
 
-  (require 'lsp-lens)
-  (require 'lsp-mode)
-  (require 'lsp-modeline)
-  (require 'which-key)
-  (lsp-enable-which-key-integration)
-  (add-hook 'python-mode-hook #'lsp-deferred)
-  (add-hook 'c-mode-hook #'lsp-deferred)
-  (add-hook 'c++-mode-hook #'lsp-deferred)
-  (add-hook 'go-mode-hook #'lsp-deferred)
-  (with-eval-after-load 'lsp-mode
-    (setup-lsp-ui)
-    (setup-lsp-treemacs)))
+        (require 'lsp-lens)
+        (require 'lsp-mode)
+        (require 'lsp-modeline)
+        (require 'which-key)
+        (lsp-enable-which-key-integration)
+        (add-hook 'python-mode-hook #'lsp-deferred)
+        (add-hook 'c-mode-hook #'lsp-deferred)
+        (add-hook 'c++-mode-hook #'lsp-deferred)
+        (add-hook 'go-mode-hook #'lsp-deferred)
+        (with-eval-after-load 'lsp-mode
+          (setup-lsp-ui)
+          (setup-lsp-treemacs)))))
 
 (defun setup-lsp-ui ()
   "Setup lsp-ui."

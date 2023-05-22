@@ -68,9 +68,21 @@
   :non-normal-prefix "C-,")
 
 ;; func to define soulwalker normal state keymap
-(general-create-definer soulwalker-normal-def
-  :states '(normal)
-  :keymaps 'override)
+(if (eq soulwalker-lsp-client 'lsp-mode)
+    (general-create-definer soulwalker-normal-def
+      :states '(normal)
+      :keymaps 'override
+
+      "g" '(:wk "Goto")
+      "ga" '(lsp-ui-code-actions :wk "code-action")
+      "gd" '(if (bound-and-true-p lsp-mode) 'lsp-find-definition 'evil-goto-definition :wk "goto-definition")
+      "gh" '(lsp-ui-peek-references :wk "peek-references")
+      "gi" '(lsp-find-implementation :wk "peek-implementation")
+      "gr" '(lsp-rename :wk "rename-symbols")
+      "gs" '(lsp-ui-peek-find-workspace-symbol :wk "peek-symbols")
+      "gD" '(lsp-ui-peek-find-definitions :wk "peek-definition")
+      "gH" '(lsp-find-references :wk "peek-references")
+      "gI" '(lsp-ui-peek-find-implementation :wk "peek-implementation")))
 
 ;; func to define soulwalker insert state keymap
 (general-create-definer soulwalker-insert-def
@@ -143,21 +155,8 @@
   "hr" '(restart-emacs :wk "restart-emacs")
 
   "l" '(:wk "Language")
-  ;; "la" '(lsp-bridge-code-action :wk "code-action")
-  "la" '(lsp-ui-code-actions :wk "code-action")
   "le" '(eval-buffer :wk "eval-buffer")
-  ;; "lf" '(lsp-bridge-code-format :wk "lsp-bridge-code-format")
   "lf" '(lsp-format-buffer :wk "lsp-format-buffer")
-  ;; for lsp-mode
-  "l" '(:wk "Goto")
-  "ld" '(lsp-find-definition :wk "peek-definition")
-  "lh" '(lsp-find-references :wk "peek-references")
-  "li" '(lsp-find-implementation :wk "peek-implementation")
-  "lr" '(lsp-rename :wk "rename-symbols")
-  "ls" '(lsp-ui-peek-find-workspace-symbol :wk "peek-symbols")
-  "lD" '(lsp-ui-peek-find-definitions :wk "peek-definition")
-  "lH" '(lsp-ui-peek-find-references :wk "peek-references")
-  "lI" '(lsp-ui-peek-find-implementation :wk "peek-implementation")
 
   "lF" '(format-all-buffer :wk "format-all-buffer")
 
