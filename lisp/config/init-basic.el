@@ -58,10 +58,10 @@
                       (set-fontset-font t 'emoji (font-spec :family font) nil 'prepend))))
 
     ;; Specify font for Chinese characters
-    (cl-loop for font in '("Sonti TC" "PingFang SC" "Microsoft Yahei" "STFangsong")
+    (cl-loop for font in '("霞鹜文楷" "Sonti TC" "PingFang SC" "Microsoft Yahei" "STFangsong")
              when (font-installed-p font)
              return (progn
-                      (setq face-font-rescale-alist `((,font . 0.8)))
+                      (setq face-font-rescale-alist `((,font . 0.79)))
                       (set-fontset-font t '(#x4e00 . #x9fff) (font-spec :family font))))))
 
 (defun setup-basic ()

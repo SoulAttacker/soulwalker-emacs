@@ -27,7 +27,13 @@
 (defun setup-cc-mode ()
   "Setup cc-mode."
   (require 'cc-mode)
-  (setq c-basic-offset 4))
+  (setq c-basic-offset 4)
+  (setup-cmake-mode))
+
+(defun setup-cmake-mode()
+  "Setup cmake-mode."
+  (require 'cmake-mode)
+  (add-to-list 'auto-mode-alist '("CMakeLists\\.txt'" . #'cmake-mode)))
 
 (provide 'init-cc)
 ;;; init-cc.el ends here

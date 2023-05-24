@@ -75,7 +75,8 @@
 
       "g" '(:wk "Goto")
       "ga" '(lsp-ui-code-actions :wk "code-action")
-      "gd" '(if (bound-and-true-p lsp-mode) 'lsp-find-definition 'evil-goto-definition :wk "goto-definition")
+      "ge" '(evil-goto-definition :wk "evil-goto-definition")
+      "gd" '(lsp-find-definition :wk "goto-definition")
       "gh" '(lsp-ui-peek-references :wk "peek-references")
       "gi" '(lsp-find-implementation :wk "peek-implementation")
       "gr" '(lsp-rename :wk "rename-symbols")
