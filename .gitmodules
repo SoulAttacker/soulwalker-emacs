@@ -274,3 +274,18 @@
 [submodule "package/multi-vterm"]
 	path = package/multi-vterm
 	url = https://github.com/suonlight/multi-vterm.git
+[submodule "package/ts-docstr"]
+	path = package/ts-docstr
+	url = https://github.com/emacs-vs/ts-docstr.git
+[submodule "package/list-utils"]
+	path = package/list-utils
+	url = https://github.com/rolandwalker/list-utils.git
+[submodule "package/msgu"]
+	path = package/msgu
+	url = https://github.com/jcs-elpa/msgu.git
+[submodule "package/refine"]
+	path = package/refine
+	url = https://github.com/Wilfred/refine.git
+[submodule "package/loop.el"]
+	path = package/loop.el
+	url = https://github.com/Wilfred/loop.el.git

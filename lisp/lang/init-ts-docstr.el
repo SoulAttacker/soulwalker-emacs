@@ -1,9 +1,9 @@
-;;; init-lang.el --- programming language configuration  -*- lexical-binding: t; -*-
+;;; init-ts-docstr.el --- ts-docstr configuration    -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023  soulwalker
 
 ;; Author: soulwalker <soulwalker@soulwalkerdeMac-Studio.local>
-;; Keywords: c
+;; Keywords: ts-docstring
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -24,21 +24,13 @@
 
 ;;; Code:
 
-(require 'init-markdown)
-(require 'init-yasnippet)
-(require 'init-prog)
-(require 'init-corfu)
-(require 'init-company)
-(require 'init-python)
-(require 'init-cc)
-(require 'init-clojure)
-(require 'init-quickrun)
-(require 'init-elisp)
-(require 'init-lsp-bridge)
-(require 'init-lsp-mode)
-(require 'init-org)
-(require 'init-tree-sitter)
-(require 'init-ts-docstr)
 
-(provide 'init-lang)
-;;; init-lang.el ends here
+(defun setup-ts-docstr ()
+  "Setup ts-docstr."
+  (require 'ts-docstr)
+  (setq ts-docstr-key-support t
+        ts-docstr-c++-style 'doxygen
+        ts-docstr-python-style 'google))
+
+(provide 'init-ts-docstr)
+;;; init-ts-docstr.el ends here

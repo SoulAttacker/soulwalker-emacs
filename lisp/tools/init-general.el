@@ -150,6 +150,7 @@
 
   "g" '(:wk "Generator")
   "gc" '(comment-region :wk "comment-line")
+  "gd" '(ts-docstr-at-point :wk "generate-docstr")
   "gu" '(uncomment-region :wk "comment-line")
 
   "h" '(:wk "Help")

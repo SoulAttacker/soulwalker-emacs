@@ -70,6 +70,7 @@
 (setup-conda)
 (setup-lsp-mode)
 (setup-tree-sitter)
+(setup-ts-docstr)
 
 ;; tool setup
 (setup-auto-save)
