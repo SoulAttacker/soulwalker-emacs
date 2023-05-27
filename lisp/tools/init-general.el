@@ -185,8 +185,10 @@
   "pU" '(unset-proxy :wk "unset-proxy")
 
   "t" '(:wk "Terminal")
-  "tt" '(vterm-other-window :wk "vterm-other-window")
-  "tv" '(vterm :wk "vertm-new-window")
+  "tt" '(vterm-other-window :wk "vterm")
+  "tc" '(multi-vterm :wk "multi-vterm")
+  "tn" '(multi-vterm-next :wk "vterm-next")
+  "tp" '(multi-vterm-prev :wk "vterm-prev")
 
   "T" '(lsp-ui-imenu :wk "lsp-ui-imenu")
 

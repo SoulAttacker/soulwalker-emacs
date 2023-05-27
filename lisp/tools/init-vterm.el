@@ -29,7 +29,12 @@
 (defun setup-vterm ()
   "Setup vterm."
   (require 'vterm)
-  (setq vterm-kill-buffer-on-exit t))
+  (setq vterm-kill-buffer-on-exit t)
+  (setup-multi-vterm))
+
+(defun setup-multi-vterm ()
+  "Setup multi-vterm."
+  (require 'multi-vterm))
 
 (provide 'init-vterm)
 ;;; init-vterm.el ends here

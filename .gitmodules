@@ -271,3 +271,6 @@
 [submodule "package/evil-goggles"]
 	path = package/evil-goggles
 	url = https://github.com/edkolev/evil-goggles
+[submodule "package/multi-vterm"]
+	path = package/multi-vterm
+	url = https://github.com/suonlight/multi-vterm.git
