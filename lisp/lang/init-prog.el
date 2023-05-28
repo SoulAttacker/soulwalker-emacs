@@ -37,12 +37,15 @@
 
 (defun setup-flycheck ()
   "Setup package flycheck."
-  (require 'flycheck)
-  (add-hook 'prog-mode-hook 'flycheck-mode))
+  (if (eq soulwalker-static-check-backend 'flycheck)
+      (progn
+        (require 'flycheck)
+        (add-hook 'prog-mode-hook 'flycheck-mode))))
 
 (defun setup-flymake ()
   "Setup package flymake."
-  (add-hook 'prog-mode-hook 'flymake-mode))
+  (if (eq soulwalker-static-check-backend 'flymake)
+      (add-hook 'prog-mode-hook 'flymake-mode)))
 
 
 (defun setup-elec-pair ()

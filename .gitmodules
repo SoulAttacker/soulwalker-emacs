@@ -289,3 +289,9 @@
 [submodule "package/loop.el"]
 	path = package/loop.el
 	url = https://github.com/Wilfred/loop.el.git
+[submodule "package/psession"]
+	path = package/psession
+	url = https://github.com/thierryvolpiatto/psession.git
+[submodule "package/emacs-async"]
+	path = package/emacs-async
+	url = https://github.com/jwiegley/emacs-async.git

@@ -95,19 +95,20 @@
 
 (defun setup-dashboard ()
   "Setup package: dashboard."
-  (require 'dashboard)
-  (setq dashboard-startup-banner (concat user-emacs-directory "etc/logo_scale.png")
-        dashboard-banner-logo-title "Welcome to SoulWalker's Emacs! Love ya~"
-        dashboard-center-content t
-        dashboard-show-shortcuts t
-        dashboard-set-file-icons t
+  (if (eq soulwalker-show-dashboard t)
+      (progn
+        (require 'dashboard)
+        (setq dashboard-startup-banner (concat user-emacs-directory "etc/logo_scale.png")
+              dashboard-banner-logo-title "Welcome to SoulWalker's Emacs! Love ya~"
+              dashboard-center-content t
+              dashboard-show-shortcuts t
+              dashboard-set-file-icons t
 
-        dashboard-items '((recents . 10)
-                          (projects . 5)))
-  (dashboard-setup-startup-hook)
-  (dashboard-refresh-buffer))
-;; (require 'centaur-tabs)
-;; (centaur-tabs-local-mode))
+              dashboard-items '((recents . 10)
+                                (projects . 5)))
+        (dashboard-setup-startup-hook)
+        (dashboard-refresh-buffer))))
+
 
 
 (defun setup-soulwalker-theme ()

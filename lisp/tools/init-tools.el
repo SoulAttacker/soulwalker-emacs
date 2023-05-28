@@ -1,3 +1,4 @@
+(require 'init-psession)
 (require 'init-ivy)
 (require 'init-vertico)
 (require 'init-avy)
