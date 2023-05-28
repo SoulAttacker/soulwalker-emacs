@@ -77,7 +77,7 @@
       "ga" '(lsp-ui-code-actions :wk "code-action")
       "ge" '(evil-goto-definition :wk "evil-goto-definition")
       "gd" '(lsp-find-definition :wk "goto-definition")
-      "gh" '(lsp-ui-peek-references :wk "peek-references")
+      "gh" '(lsp-ui-peek-find-references :wk "peek-references")
       "gi" '(lsp-find-implementation :wk "peek-implementation")
       "gr" '(lsp-rename :wk "rename-symbols")
       "gs" '(lsp-ui-peek-find-workspace-symbol :wk "peek-symbols")
@@ -117,6 +117,9 @@
 
   ;; command for macos
   "M-s" '(save-buffer :wk "save-file")
+
+  ;; doc
+  "K" '(lsp-ui-doc-glance :wk "doc-glance")
   )
 
 ;; leader key definition, prefix is "SPC" or "C-,"
