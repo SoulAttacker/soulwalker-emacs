@@ -36,7 +36,6 @@
 (setup-all-the-icons)
 ;; (setup-centaur-tabs)
 (setup-sort-tab)
-(setup-psession)
 (setup-dashboard)
 (setup-soulwalker-theme)
 (setup-awesome-tray)

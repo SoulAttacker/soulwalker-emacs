@@ -30,7 +30,8 @@
   "Setup fonts."
   (when (display-graphic-p)
     ;; Set default font
-    (cl-loop for font in '("FantasqueSansM Nerd Font Mono" "Iosevka" "AnonymicePro Nerd Font" "CaskaydiaCove Nerd Font"
+    (cl-loop for font in '("Rec Mono Casual" "FantasqueSansM Nerd Font Mono"
+                           "Iosevka" "AnonymicePro Nerd Font" "CaskaydiaCove Nerd Font"
                            "PT Mono" "Fira Code" "Jetbrains Mono"
                            "SF Mono" "Hack" "Source Code Pro" "Menlo"
                            "Monaco" "DejaVu Sans Mono" "CozetteVector")
@@ -61,7 +62,7 @@
     (cl-loop for font in '("霞鹜文楷" "Sonti TC" "PingFang SC" "Microsoft Yahei" "STFangsong")
              when (font-installed-p font)
              return (progn
-                      (setq face-font-rescale-alist `((,font . 0.79)))
+                      (setq face-font-rescale-alist `((,font . 0.95)))
                       (set-fontset-font t '(#x4e00 . #x9fff) (font-spec :family font))))))
 
 (defun setup-basic ()

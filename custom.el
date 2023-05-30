@@ -29,7 +29,7 @@
 (setq soulwalker-lsp-client 'lsp-mode)             ; completion client in `lsp-mode` or `lsp-bridge`
 (setq soulwalker-completion-frontend 'corfu)       ; completion frontend in `corfu` or `company`
 (setq soulwalker-completion-mechanism 'ivy)        ; completion mechanism in `ivy` or `vertico`
-(setq soulwalker-show-dashboard nil)               ; to show dashboard or restore session when startup
+(setq soulwalker-show-dashboard t)                 ; to show dashboard or restore session when startup
 (setq soulwalker-static-check-backend 'flycheck)   ; static check backend in `flycheck` or `flymake`
 
 
