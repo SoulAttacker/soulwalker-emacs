@@ -31,6 +31,8 @@
         evil-want-integration t
         evil-want-Y-yank-to-eol t
         evil-want-fine-undo t)
+  (add-hook 'evil-normal-state-entry-hook (lambda() (setq cursor-in-non-selected-windows nil)))
+  (add-hook 'evil-normal-state-exit-hook (lambda() (setq cursor-in-non-selected-windows t)))
   (require 'evil)
   (evil-mode))
 
