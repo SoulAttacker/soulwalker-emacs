@@ -29,6 +29,8 @@
   "Setup lsp-mode."
   (if (eq soulwalker-lsp-client 'lsp-mode)
       (progn
+        (require 'lsp-pylsp)
+        (require 'lsp-clangd)
         (setq lsp-auto-guess-root t
 	          lsp-log-io nil
               lsp-headerline-breadcrumb-segments '(project file symbols)
@@ -66,7 +68,6 @@
 (defun setup-lsp-ui ()
   "Setup lsp-ui."
   (require 'lsp-ui)
-  (require 'flycheck)
   (with-eval-after-load 'lsp-mode
     (setq lsp-ui-doc-include-signature t
           lsp-ui-doc-enable nil
@@ -74,8 +75,7 @@
           lsp-ui-doc-show-with-cursor t
           lsp-ui-sideline-enable t
           lsp-ui-sideline-show-diagnostics t)
-    (lsp-ui-mode))
-  (add-hook 'lsp-ui-mode-hook #'(lambda () (flycheck-mode -1))))
+    (lsp-ui-mode)))
 
 (defun setup-lsp-treemacs ()
   "Setup lsp-treemacs."
