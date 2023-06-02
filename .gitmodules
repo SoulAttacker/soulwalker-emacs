@@ -295,3 +295,15 @@
 [submodule "package/emacs-async"]
 	path = package/emacs-async
 	url = https://github.com/jwiegley/emacs-async.git
+[submodule "package/nerd-icons.el"]
+	path = package/nerd-icons.el
+	url = https://github.com/rainstormstudio/nerd-icons.el.git
+[submodule "package/treemacs-nerd-icons"]
+	path = package/treemacs-nerd-icons
+	url = https://github.com/rainstormstudio/treemacs-nerd-icons.git
+[submodule "package/nerd-icons-ivy-rich"]
+	path = package/nerd-icons-ivy-rich
+	url = https://github.com/seagle0128/nerd-icons-ivy-rich.git
+[submodule "package/nerd-icons-completion"]
+	path = package/nerd-icons-completion
+	url = https://github.com/rainstormstudio/nerd-icons-completion.git

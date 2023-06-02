@@ -24,6 +24,7 @@
 
 ;;; Code:
 
+
 (defun setup-corfu ()
   "Setup corfu."
   (if (and (eq soulwalker-completion-frontend 'corfu) (not (eq soulwalker-lsp-client 'lsp-bridge)))
@@ -44,7 +45,6 @@
         (add-hook 'prog-mode-hook 'corfu-popupinfo-mode)
         (setup-kind-icon)
         (setup-cape))))
-
 
 (defun setup-kind-icon ()
   "Setup kind-icon."

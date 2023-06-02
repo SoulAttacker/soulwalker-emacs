@@ -31,6 +31,7 @@
 (setq soulwalker-completion-mechanism 'ivy)        ; completion mechanism in `ivy` or `vertico`
 (setq soulwalker-show-dashboard t)                 ; to show dashboard or restore session when startup
 (setq soulwalker-static-check-backend 'flycheck)   ; static check backend in `flycheck` or `flymake`
+(setq soulwalker-icons-mode 'nerd-icons)           ; `nerd-icons` or `all-the-icons`
 
 
 (provide 'custom)

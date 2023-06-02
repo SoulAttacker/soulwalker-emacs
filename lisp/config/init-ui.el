@@ -55,9 +55,14 @@
 
 (defun setup-all-the-icons ()
   "Setup package: all-the-icons."
-  (when (display-graphic-p)
-    (require 'all-the-icons)))
+  (if (eq soulwalker-icons-mode 'all-the-icons)
+      (when (display-graphic-p)
+        (require 'all-the-icons))))
 
+(defun setup-nerd-icons ()
+  "Setup package: nerd-icons."
+  (if (eq soulwalker-icons-mode 'nerd-icons)
+      (require 'nerd-icons)))
 
 (defun setup-centaur-tabs ()
   "Setup package: centaur-tabs."

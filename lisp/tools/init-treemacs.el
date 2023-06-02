@@ -25,16 +25,24 @@
 ;;; Code:
 
 (defun setup-treemacs ()
-  "init package: treemacs"
+  "Setup package: treemacs."
   (require 'treemacs)
   (require 'treemacs-file-management)
   (require 'cfrs)
   (add-hook 'treemacs-mode-hook 'treemacs-follow-mode)
-  (add-hook 'treemacs-mode-hook #'setup-treemacs-evil))
+  (add-hook 'treemacs-mode-hook #'setup-treemacs-evil)
+  (setup-treemacs-nerd-icons))
 
 (defun setup-treemacs-evil ()
-  "init package treemacs-evil"
+  "Setup package: treemacs-evil."
   (require 'treemacs-evil))
+
+(defun setup-treemacs-nerd-icons ()
+  "Setup package: treemacs-nerd-icons."
+  (if (eq soulwalker-icons-mode 'nerd-icons)
+      (progn
+        (require 'treemacs-nerd-icons)
+        (treemacs-load-theme "nerd-icons"))))
 
 (provide 'init-treemacs)
 ;;; init-treemacs.el ends here

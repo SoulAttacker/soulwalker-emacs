@@ -36,6 +36,7 @@
         (setup-counsel)
         (setup-ivy-rich)
         (setup-all-the-icons-ivy-rich)
+        (setup-nerd-icons-ivy-rich)
         (if (eq soulwalker-display-mode 'posframe)
             (setup-ivy-posframe)))))
 
@@ -59,19 +60,21 @@
 
 (defun setup-all-the-icons-ivy-rich ()
   "Setup all-the-icons-ivy-rich."
-  (require 'all-the-icons-ivy-rich)
-  (setq
-   ;; Whether display the icons
-   all-the-icons-ivy-rich-icon t
-   ;; Whether display the colorful icons.
-   all-the-icons-ivy-rich-color-icon t
-   ;; The icon size
-   all-the-icons-ivy-rich-icon-size 1.0
-   ;; Whether support project root
-   all-the-icons-ivy-rich-project t
-   ;; Maximum truncation width of annotation fields.
-   all-the-icons-ivy-rich-field-width 80)
-  (all-the-icons-ivy-rich-mode))
+  (if (eq soulwalker-icons-mode 'nerd-icons)
+      (progn
+        (require 'all-the-icons-ivy-rich)
+        (setq
+         ;; Whether display the icons
+         all-the-icons-ivy-rich-icon t
+         ;; Whether display the colorful icons.
+         all-the-icons-ivy-rich-color-icon t
+         ;; The icon size
+         all-the-icons-ivy-rich-icon-size 1.0
+         ;; Whether support project root
+         all-the-icons-ivy-rich-project t
+         ;; Maximum truncation width of annotation fields.
+         all-the-icons-ivy-rich-field-width 80)
+        (all-the-icons-ivy-rich-mode))))
 
 
 (defun setup-ivy-posframe ()
@@ -83,6 +86,19 @@
                                   (right-fringe . 8))
         ivy-posframe-display-functions-alist '((t . ivy-posframe-display)))
   (ivy-posframe-mode))
+
+
+(defun setup-nerd-icons-ivy-rich ()
+  "Setup nerd-icons-ivy-rich."
+  (if (eq soulwalker-icons-mode 'nerd-icons)
+      (progn
+        (require 'nerd-icons-ivy-rich)
+        (setq nerd-icons-ivy-rich-icon t
+              nerd-icons-ivy-rich-color-icon t
+              nerd-icons-ivy-rich-icon-size 1.0
+              nerd-icons-ivy-rich-project t
+              nerd-icons-ivy-rich-field-width 80
+              inhibit-compacting-font-caches t))))
 
 
 (provide 'init-ivy)
