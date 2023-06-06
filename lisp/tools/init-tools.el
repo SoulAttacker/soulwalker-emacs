@@ -18,6 +18,7 @@
 (require 'init-git-gutter)
 (require 'init-popper)
 (require 'init-which-key)
+(require 'init-todo-ivy)
 (require 'init-general)
 
 (provide 'init-tools)

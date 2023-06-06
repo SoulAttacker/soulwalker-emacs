@@ -310,3 +310,6 @@
 [submodule "package/yaml-mode"]
 	path = package/yaml-mode
 	url = https://github.com/yoshiki/yaml-mode.git
+[submodule "package/doom-todo-ivy"]
+	path = package/doom-todo-ivy
+	url = https://github.com/jsmestad/doom-todo-ivy.git

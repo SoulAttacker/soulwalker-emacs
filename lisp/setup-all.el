@@ -90,6 +90,7 @@
 (setup-treemacs)
 (setup-treemacs-evil)
 (setup-vterm)
+(setup-doom-todo-ivy)
 (setup-which-key)
 (setup-org-mode)
 (setup-popper)
