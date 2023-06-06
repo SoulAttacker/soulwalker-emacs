@@ -307,3 +307,6 @@
 [submodule "package/nerd-icons-completion"]
 	path = package/nerd-icons-completion
 	url = https://github.com/rainstormstudio/nerd-icons-completion.git
+[submodule "package/yaml-mode"]
+	path = package/yaml-mode
+	url = https://github.com/yoshiki/yaml-mode.git

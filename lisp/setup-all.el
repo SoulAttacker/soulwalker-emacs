@@ -71,6 +71,7 @@
 (setup-lsp-mode)
 (setup-tree-sitter)
 (setup-ts-docstr)
+(setup-yaml-mode)
 
 ;; tool setup
 (setup-auto-save)
