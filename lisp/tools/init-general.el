@@ -165,7 +165,9 @@
 
   "lF" '(format-all-buffer :wk "format-all-buffer")
 
-  "m" '(magit :wk "magit")
+  "m" '(:wk "git")
+  "mm" '(magit :wk "magit")
+  "mu" '(git-gutter:update-all-windows :wk "git-gutter-update")
 
   "w" '(:wk "Window")
   "wh" '(evil-window-left :wk "window-left")
