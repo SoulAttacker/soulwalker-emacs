@@ -160,6 +160,7 @@
   "hr" '(restart-emacs :wk "restart-emacs")
 
   "l" '(:wk "Language")
+  "la" '(lsp-execute-code-action :wk "lsp-code-action")
   "le" '(eval-buffer :wk "eval-buffer")
   "lf" '(lsp-format-buffer :wk "lsp-format-buffer")
 
