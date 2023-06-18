@@ -72,6 +72,7 @@
 (setup-tree-sitter)
 (setup-ts-docstr)
 (setup-yaml-mode)
+(setup-bison-mode)
 
 ;; tool setup
 (setup-auto-save)

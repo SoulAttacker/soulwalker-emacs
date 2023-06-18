@@ -61,6 +61,7 @@
         (add-hook 'c-mode-hook #'lsp-deferred)
         (add-hook 'c++-mode-hook #'lsp-deferred)
         (add-hook 'go-mode-hook #'lsp-deferred)
+        (add-hook 'cmake-mode-hook #'lsp-deferred)
         (with-eval-after-load 'lsp-mode
           (setup-lsp-ui)
           (setup-lsp-treemacs)))))

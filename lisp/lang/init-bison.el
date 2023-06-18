@@ -1,9 +1,9 @@
-;;; init-lang.el --- programming language configuration  -*- lexical-binding: t; -*-
+;;; init-bison.el --- bison configration             -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023  soulwalker
 
 ;; Author: soulwalker <soulwalker@soulwalkerdeMac-Studio.local>
-;; Keywords: c
+;; Keywords: bison
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -24,23 +24,12 @@
 
 ;;; Code:
 
-(require 'init-markdown)
-(require 'init-yasnippet)
-(require 'init-prog)
-(require 'init-corfu)
-(require 'init-company)
-(require 'init-python)
-(require 'init-cc)
-(require 'init-clojure)
-(require 'init-quickrun)
-(require 'init-elisp)
-(require 'init-lsp-bridge)
-(require 'init-lsp-mode)
-(require 'init-org)
-(require 'init-tree-sitter)
-(require 'init-ts-docstr)
-(require 'init-yaml)
-(require 'init-bison)
+(defun setup-bison-mode ()
+  "Setup bison-mode."
+  (require 'bison-mode)
+  (add-to-list 'auto-mode-alist '("\\.y\\'" . bison-mode))
+  (add-to-list 'auto-mode-alist '("\\.l\\'" . bison-mode)))
 
-(provide 'init-lang)
-;;; init-lang.el ends here
+
+(provide 'init-bison)
+;;; init-bison.el ends here

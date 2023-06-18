@@ -313,3 +313,6 @@
 [submodule "package/doom-todo-ivy"]
 	path = package/doom-todo-ivy
 	url = https://github.com/jsmestad/doom-todo-ivy.git
+[submodule "package/bison-mode"]
+	path = package/bison-mode
+	url = https://github.com/Wilfred/bison-mode.git
