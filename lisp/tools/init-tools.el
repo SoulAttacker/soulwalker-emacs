@@ -17,6 +17,7 @@
 (require 'init-prescient)
 (require 'init-git-gutter)
 (require 'init-popper)
+(require 'init-ace-window)
 (require 'init-which-key)
 (require 'init-todo-ivy)
 (require 'init-general)

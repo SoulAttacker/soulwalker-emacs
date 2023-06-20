@@ -95,6 +95,7 @@
 (setup-which-key)
 (setup-org-mode)
 (setup-popper)
+(setup-ace-window)
 
 
 (provide 'setup-all)

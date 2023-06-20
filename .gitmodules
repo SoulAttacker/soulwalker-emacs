@@ -316,3 +316,6 @@
 [submodule "package/bison-mode"]
 	path = package/bison-mode
 	url = https://github.com/Wilfred/bison-mode.git
+[submodule "package/ace-window"]
+	path = package/ace-window
+	url = https://github.com/abo-abo/ace-window.git

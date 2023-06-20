@@ -55,6 +55,7 @@
  "C-`" '(popper-toggle-latest :wk "popper-toggle-latest")
  "M-`" '(popper-cycle :wk "popper-cycle")
  "C-M-`" '(popper-toggle-type :wk "popper-toggle-type")
+ "M-o" '(ace-window :wk "ace-window")
  "M-[" '(sort-tab-select-prev-tab :wk "prev-tab")
  "M-]" '(sort-tab-select-next-tab :wk "prev-tab")
  )

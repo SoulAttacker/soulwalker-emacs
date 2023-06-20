@@ -31,6 +31,7 @@
       (progn
         (require 'lsp-pylsp)
         (require 'lsp-clangd)
+        (require 'lsp-diagnostics)
         (setq lsp-auto-guess-root t
 	          lsp-log-io nil
               lsp-headerline-breadcrumb-segments '(project file symbols)
@@ -62,6 +63,7 @@
         (add-hook 'c++-mode-hook #'lsp-deferred)
         (add-hook 'go-mode-hook #'lsp-deferred)
         (add-hook 'cmake-mode-hook #'lsp-deferred)
+        (add-hook 'lsp-mode-hook #'lsp-diagnostics)
         (with-eval-after-load 'lsp-mode
           (setup-lsp-ui)
           (setup-lsp-treemacs)))))
