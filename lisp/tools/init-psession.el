@@ -30,7 +30,8 @@
       (progn
         (require 'psession)
         (setq psession-elisp-objects-default-directory (concat user-emacs-directory ".cache/elisp-objects"))
-        (psession-mode 1))))
+        (psession-mode 1)
+        (sort-tab-turn-on))))
 
 (provide 'init-psession)
 ;;; init-psession.el ends here

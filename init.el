@@ -1,5 +1,5 @@
 ;; garbage collection
-(setq gc-cons-threshold most-positive-fixnum
+(setq gc-cons-threshold (* 1024 1024 10)
       gc-cons-percentage 0.6)
 ;; read-process-output-max
 (setq read-process-output-max (* 1024 1024))
