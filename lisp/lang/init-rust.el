@@ -1,9 +1,9 @@
-;;; init-tree-sitter.el --- tree-sitter configuration  -*- lexical-binding: t; -*-
+;;; init-rust.el --- rust configuration              -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023  soulwalker
 
 ;; Author: soulwalker <soulwalker@soulwalkerdeMac-Studio.local>
-;; Keywords: tree-sitter
+;; Keywords: rust
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -24,22 +24,10 @@
 
 ;;; Code:
 
+(defun setup-rust-mode ()
+  "Setup rust-mode."
+  (require 'rust-mode)
+  (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode)))
 
-(defun setup-tree-sitter ()
-  "Setup package: tree-sitter."
-  (require 'tree-sitter)
-  (require 'tree-sitter-hl)
-  (require 'tree-sitter-langs)
-  (require 'tree-sitter-debug)
-  (require 'tree-sitter-query)
-  (add-hook 'python-mode-hook 'tree-sitter-mode)
-  (add-hook 'c-mode-hook 'tree-sitter-mode)
-  (add-hook 'c++-mode-hook 'tree-sitter-mode)
-  (add-hook 'python-mode-hook 'tree-sitter-hl-mode)
-  (add-hook 'c-mode-hook 'tree-sitter-hl-mode)
-  (add-hook 'c++-mode-hook 'tree-sitter-hl-mode)
-  (add-hook 'rust-mode-hook 'tree-sitter-hl-mode))
-
-
-(provide 'init-tree-sitter)
-;;; init-treesitter.el ends here
+(provide 'init-rust)
+;;; init-rust.el ends here

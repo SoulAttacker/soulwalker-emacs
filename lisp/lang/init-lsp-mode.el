@@ -63,6 +63,7 @@
         (add-hook 'c++-mode-hook #'lsp-deferred)
         (add-hook 'go-mode-hook #'lsp-deferred)
         (add-hook 'cmake-mode-hook #'lsp-deferred)
+        (add-hook 'rust-mode-hook #'lsp-deferred)
         (add-hook 'lsp-mode-hook (lambda () (progn (lsp-diagnostics)
                                               (flymake-mode -1))))
         (with-eval-after-load 'lsp-mode

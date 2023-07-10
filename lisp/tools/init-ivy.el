@@ -98,7 +98,8 @@
               nerd-icons-ivy-rich-icon-size 1.0
               nerd-icons-ivy-rich-project t
               nerd-icons-ivy-rich-field-width 80
-              inhibit-compacting-font-caches t))))
+              inhibit-compacting-font-caches t
+              nerd-icons-ivy-rich-mode 1))))
 
 
 (provide 'init-ivy)

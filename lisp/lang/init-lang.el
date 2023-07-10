@@ -41,6 +41,7 @@
 (require 'init-ts-docstr)
 (require 'init-yaml)
 (require 'init-bison)
+(require 'init-rust)
 
 (provide 'init-lang)
 ;;; init-lang.el ends here

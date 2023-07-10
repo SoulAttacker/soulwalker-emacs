@@ -73,6 +73,7 @@
 (setup-ts-docstr)
 (setup-yaml-mode)
 (setup-bison-mode)
+(setup-rust-mode)
 
 ;; tool setup
 (setup-auto-save)
