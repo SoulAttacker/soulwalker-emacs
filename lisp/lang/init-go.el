@@ -1,9 +1,9 @@
-;;; init-lang.el --- programming language configuration  -*- lexical-binding: t; -*-
+;;; init-go.el --- go configuration                  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023  soulwalker
 
 ;; Author: soulwalker <soulwalker@soulwalkerdeMac-Studio.local>
-;; Keywords: c
+;; Keywords: go
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -24,27 +24,11 @@
 
 ;;; Code:
 
-(require 'init-markdown)
-(require 'init-yasnippet)
-(require 'init-prog)
-(require 'init-corfu)
-(require 'init-company)
-(require 'init-python)
-(require 'init-cc)
-(require 'init-clojure)
-(require 'init-quickrun)
-(require 'init-elisp)
-(require 'init-lsp-bridge)
-(require 'init-lsp-mode)
-(require 'init-org)
-(require 'init-tree-sitter)
-(require 'init-ts-docstr)
-(require 'init-yaml)
-(require 'init-bison)
-(require 'init-rust)
-(require 'init-ocaml)
-(require 'init-haskell)
-(require 'init-go)
 
-(provide 'init-lang)
-;;; init-lang.el ends here
+(defun setup-go ()
+  "Setup go."
+  (require 'go-mode)
+  (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode)))
+
+(provide 'init-go)
+;;; init-go.el ends here

@@ -1,9 +1,9 @@
-;;; init-lang.el --- programming language configuration  -*- lexical-binding: t; -*-
+;;; init-ocaml.el --- ocaml configuration            -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023  soulwalker
 
 ;; Author: soulwalker <soulwalker@soulwalkerdeMac-Studio.local>
-;; Keywords: c
+;; Keywords: ocaml
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -24,27 +24,15 @@
 
 ;;; Code:
 
-(require 'init-markdown)
-(require 'init-yasnippet)
-(require 'init-prog)
-(require 'init-corfu)
-(require 'init-company)
-(require 'init-python)
-(require 'init-cc)
-(require 'init-clojure)
-(require 'init-quickrun)
-(require 'init-elisp)
-(require 'init-lsp-bridge)
-(require 'init-lsp-mode)
-(require 'init-org)
-(require 'init-tree-sitter)
-(require 'init-ts-docstr)
-(require 'init-yaml)
-(require 'init-bison)
-(require 'init-rust)
-(require 'init-ocaml)
-(require 'init-haskell)
-(require 'init-go)
 
-(provide 'init-lang)
-;;; init-lang.el ends here
+(defun setup-ocaml ()
+  "Setup ocaml."
+  (add-to-list 'auto-mode-alist '("\\.ml[iylp]?$" . caml-mode))
+  (autoload 'caml-mode "caml" "Major mode for editing OCaml code." t)
+  (autoload 'run-caml "inf-caml" "Run an inferior OCaml process." t)
+  (autoload 'camldebug "camldebug" "Run ocamldebug on program." t)
+  (add-to-list 'interpreter-mode-alist '("ocamlrun" . caml-mode))
+  (add-to-list 'interpreter-mode-alist '("ocaml" . caml-mode)))
+
+(provide 'init-ocaml)
+;;; init-ocmal.el ends here

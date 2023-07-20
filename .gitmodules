@@ -322,3 +322,18 @@
 [submodule "package/rust-mode"]
 	path = package/rust-mode
 	url = https://github.com/rust-lang/rust-mode.git
+[submodule "package/tuareg"]
+	path = package/tuareg
+	url = https://github.com/ocaml/tuareg.git
+[submodule "package/caml-mode"]
+	path = package/caml-mode
+	url = https://github.com/ocaml/caml-mode.git
+[submodule "package/haskell-mode"]
+	path = package/haskell-mode
+	url = https://github.com/haskell/haskell-mode.git
+[submodule "package/lsp-haskell"]
+	path = package/lsp-haskell
+	url = https://github.com/emacs-lsp/lsp-haskell.git
+[submodule "package/go-mode.el"]
+	path = package/go-mode.el
+	url = https://github.com/dominikh/go-mode.el.git

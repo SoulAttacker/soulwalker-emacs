@@ -74,6 +74,9 @@
 (setup-yaml-mode)
 (setup-bison-mode)
 (setup-rust-mode)
+(setup-ocaml)
+(setup-haskell)
+(setup-go)
 
 ;; tool setup
 (setup-auto-save)
