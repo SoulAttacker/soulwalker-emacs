@@ -37,6 +37,8 @@
               lsp-bridge-enable-diagnostics t
               lsp-bridge-enable-hover-diagnostic t
               lsp-bridge-enable-org-babel t
+              lsp-bridge-enable-completion-in-string t
+              lsp-bridge-enable-auto-format-code t
 
               acm-candidate-match-function 'orderless-regexp
               acm-enable-doc t
@@ -49,6 +51,8 @@
               acm-enable-preview t)
         (define-key acm-mode-map [tab] 'acm-select-next)
         (define-key acm-mode-map [backtab] 'acm-select-prev)
+        (define-key lsp-bridge-peek-keymap (kbd "C-n" 'lsp-bridge-peek-list-next-line))
+        (define-key lsp-bridge-peek-keymap (kbd "C-p" 'lsp-bridge-peek-list-prev-line))
         (add-hook 'prog-mode-hook 'global-lsp-bridge-mode))))
 
 

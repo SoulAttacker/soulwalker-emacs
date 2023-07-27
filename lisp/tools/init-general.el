@@ -86,6 +86,23 @@
       "gH" '(lsp-find-references :wk "peek-references")
       "gI" '(lsp-ui-peek-find-implementation :wk "peek-implementation")))
 
+;; func to define soulwalker normal state keymap
+(if (eq soulwalker-lsp-client 'lsp-bridge)
+    (general-create-definer soulwalker-normal-def
+      :states '(normal)
+      :keymaps 'override
+
+      "g" '(:wk "Goto")
+      "ga" '(lsp-bridge-code-action :wk "code-action")
+      "ge" '(evil-goto-definition :wk "evil-goto-definition")
+      "gd" '(lsp-bridge-find-def :wk "goto-definition")
+      "gh" '(lsp-bridge-peek :wk "peek-references")
+      "gi" '(lsp-bridge-find-impl :wk "peek-implementation")
+      "gr" '(lsp-bridge-rename :wk "rename-symbols")
+      "gD" '(lsp-bridge-peek :wk "peek-definition")
+      "gH" '(lsp-bridge-find-references :wk "peek-references")
+      "gI" '(lsp-bridge-peek :wk "peek-implementation")))
+
 ;; func to define soulwalker insert state keymap
 (general-create-definer soulwalker-insert-def
   :states '(insert)

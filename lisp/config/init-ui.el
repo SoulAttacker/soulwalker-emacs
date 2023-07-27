@@ -118,8 +118,10 @@
 
 (defun setup-soulwalker-theme ()
   "Setup personal theme: soulwalker-theme."
-  (add-to-list 'custom-theme-load-path (concat user-emacs-directory "lisp/themes"))
-  (load-theme 'soulwalker-dark t))
+  ;; (add-to-list 'custom-theme-load-path (concat user-emacs-directory "lisp/themes"))
+  ;; (load-theme 'soulwalker-dark t))
+  (require 'ef-themes)
+  (load-theme 'ef-kassio t))
 
 
 (defun setup-highlight-indent-guides ()

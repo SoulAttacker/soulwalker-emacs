@@ -25,7 +25,7 @@
 ;;; Code:
 
 (setq soulwalker-active-winner t)                  ; wheather to active winner mode
-(setq soulwalker-display-mode 'minibuffer)         ; completion display in `childframe` or `minibuffer`
+(setq soulwalker-display-mode 'childframe)         ; completion display in `childframe` or `minibuffer`
 (setq soulwalker-lsp-client 'lsp-mode)             ; completion client in `lsp-mode` or `lsp-bridge`
 (setq soulwalker-completion-frontend 'corfu)       ; completion frontend in `corfu` or `company`
 (setq soulwalker-completion-mechanism 'ivy)        ; completion mechanism in `ivy` or `vertico`
