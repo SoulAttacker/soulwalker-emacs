@@ -77,6 +77,8 @@
 (setup-ocaml)
 (setup-haskell)
 (setup-go)
+;; (setup-clojure-mode)
+(setup-lua)
 
 ;; tool setup
 (setup-auto-save)
@@ -98,6 +100,7 @@
 (setup-doom-todo-ivy)
 (setup-which-key)
 (setup-org-mode)
+;; (setup-smart-parens)
 (setup-popper)
 (setup-ace-window)
 

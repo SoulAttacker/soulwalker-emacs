@@ -30,7 +30,7 @@
   "Setup fonts."
   (when (display-graphic-p)
     ;; Set default font
-    (cl-loop for font in '("FantasqueSansM Nerd Font Mono" "Rec Mono Casual" "Cartograph CF"
+    (cl-loop for font in '("JetBrainsMono Nerd Font" "Victor Mono" "FantasqueSansM Nerd Font Mono" "Rec Mono Casual" "Cartograph CF"
                            "Iosevka" "AnonymicePro Nerd Font" "CaskaydiaCove Nerd Font"
                            "PT Mono" "Fira Code" "Jetbrains Mono"
                            "SF Mono" "Hack" "Source Code Pro" "Menlo"

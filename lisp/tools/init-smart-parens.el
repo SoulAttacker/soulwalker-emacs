@@ -1,9 +1,9 @@
-;;; init-clojure.el --- clojure configuration        -*- lexical-binding: t; -*-
+;;; init-smart-parens.el --- smart-parens configuration  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023  soulwalker
 
 ;; Author: soulwalker <soulwalker@soulwalkerdeMac-Studio.local>
-;; Keywords:
+;; Keywords: smart-parens
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -25,19 +25,11 @@
 ;;; Code:
 
 
-(defun setup-clojure-mode ()
-  "Setup clojure-mode."
-  (require 'clojure-mode)
-  (add-to-list 'auto-mode-alist '("\\.clj\\'" . clojure-mode))
-  (add-to-list 'auto-mode-alist '("\\.cljs\\'" . clojure-mode))
-  (setup-cider))
+(defun setup-smart-parens ()
+  "Setup smart-parens."
+  (require 'smartparens-config)
+  (add-hook 'prog-mode-hook #'smartparens-mode)
+  (add-hook 'org-mode-hook #'smartparens-mode))
 
-(defun setup-cider ()
-  "Setup cider."
-  (require 'clojure-mode)
-  (require 'cider)
-
-  (setq nerpl-pop-statcktraces nil))
-
-(provide 'init-clojure)
-;;; init-clojure.el ends here
+(provide 'init-smart-parens)
+;;; init-smart-parens.el ends here

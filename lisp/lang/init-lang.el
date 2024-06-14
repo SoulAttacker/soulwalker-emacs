@@ -45,6 +45,7 @@
 (require 'init-ocaml)
 (require 'init-haskell)
 (require 'init-go)
+(require 'init-lua)
 
 (provide 'init-lang)
 ;;; init-lang.el ends here

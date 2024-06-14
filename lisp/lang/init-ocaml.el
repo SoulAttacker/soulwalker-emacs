@@ -27,12 +27,32 @@
 
 (defun setup-ocaml ()
   "Setup ocaml."
+
+  ;; caml-mode
   (add-to-list 'auto-mode-alist '("\\.ml[iylp]?$" . caml-mode))
   (autoload 'caml-mode "caml" "Major mode for editing OCaml code." t)
   (autoload 'run-caml "inf-caml" "Run an inferior OCaml process." t)
   (autoload 'camldebug "camldebug" "Run ocamldebug on program." t)
   (add-to-list 'interpreter-mode-alist '("ocamlrun" . caml-mode))
-  (add-to-list 'interpreter-mode-alist '("ocaml" . caml-mode)))
+  (add-to-list 'interpreter-mode-alist '("ocaml" . caml-mode))
+
+  ;; tuareg-mode
+  (add-to-list 'auto-mode-alist '("\\.ocamlinit\\'" . tuareg-mode))
+
+  ;; merlin
+  (require 'merlin)
+  (add-hook 'tuareg-mode-hook #'merlin-mode)
+  (setq merlin-error-after-save nil)
+
+  ;; merlin-eldoc
+  (require 'merlin-eldoc)
+  (add-hook 'tuareg-mode-hook #'merlin-eldoc-setup)
+
+  ;; utop
+  (require 'utop)
+  (setq utop-command "opam exec -- utop -emacs")
+
+  )
 
 (provide 'init-ocaml)
 ;;; init-ocmal.el ends here

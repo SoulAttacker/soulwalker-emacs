@@ -1,4 +1,4 @@
-;;; init-clojure.el --- clojure configuration        -*- lexical-binding: t; -*-
+;;; init-lua.el --- lua configuration               -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2023  soulwalker
 
@@ -24,20 +24,11 @@
 
 ;;; Code:
 
+(defun setup-lua ()
+  "Setup lua-mode."
+  (require 'lua-mode)
+  (add-to-list 'auto-mode-alist '("\\.lua\\'" . lua-mode)))
 
-(defun setup-clojure-mode ()
-  "Setup clojure-mode."
-  (require 'clojure-mode)
-  (add-to-list 'auto-mode-alist '("\\.clj\\'" . clojure-mode))
-  (add-to-list 'auto-mode-alist '("\\.cljs\\'" . clojure-mode))
-  (setup-cider))
 
-(defun setup-cider ()
-  "Setup cider."
-  (require 'clojure-mode)
-  (require 'cider)
-
-  (setq nerpl-pop-statcktraces nil))
-
-(provide 'init-clojure)
-;;; init-clojure.el ends here
+(provide 'init-lua)
+;;; init-cc.el ends here

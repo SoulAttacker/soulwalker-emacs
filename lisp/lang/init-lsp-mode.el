@@ -51,7 +51,10 @@
 
               ;; cpp clangd setup
               c-basic-offset 4
-              lsp-clangd-binary-path "/usr/bin/clangd")
+              lsp-clangd-binary-path "/usr/bin/clangd"
+
+              ;; lua language server setup
+              lsp-clients-lua-language-server-bin "/opt/homebrew/bin/lua-language-server")
 
         (require 'lsp-lens)
         (require 'lsp-mode)
@@ -66,6 +69,7 @@
         (add-hook 'rust-mode-hook #'lsp-deferred)
         (add-hook 'haskell-mode-hook #'lsp-deferred)
         (add-hook 'go-mode-hook #'lsp-deferred)
+        (add-hook 'lua-mode-hook #'lsp-deferred)
         (add-hook 'lsp-mode-hook (lambda () (progn (lsp-diagnostics)
                                               (flymake-mode -1))))
         (with-eval-after-load 'lsp-mode

@@ -31,6 +31,23 @@
 ;;   (dolist (package-mode-hook)
 ;;     (add-hook 'basic-hook #'package-mode-hook)))
 
+(defun export-org-to-csv (directory export-directory)
+  "Export all Org files in the given DIRECTORY to CSV files with the same names, and save them in the EXPORT-DIRECTORY."
+  (interactive "DDirectory: \nDExport Directory: ")
+  (let ((files (directory-files directory nil "\\.org$")))
+    (dolist (file files)
+      (let* ((org-filepath (concat (file-name-as-directory directory) file))
+             (csv-filename (file-name-sans-extension file))
+             (csv-filepath (concat (file-name-as-directory export-directory) csv-filename ".csv")))
+        (when (file-regular-p org-filepath)
+          (let ((buf (find-file-noselect org-filepath)))
+            (with-current-buffer buf
+              (save-excursion
+                (goto-char (point-min))
+                (when (re-search-forward "|.*|\\(\n|.*|\\)*" nil t)
+                  (org-table-export csv-filepath "orgtbl-to-csv"))))
+            (kill-buffer buf)))))))
+
 
 (provide 'init-funcs)
 ;;; init-funcs.el ends here

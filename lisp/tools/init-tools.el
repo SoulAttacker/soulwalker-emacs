@@ -20,6 +20,7 @@
 (require 'init-ace-window)
 (require 'init-which-key)
 (require 'init-todo-ivy)
+(require 'init-smart-parens)
 (require 'init-general)
 
 (provide 'init-tools)

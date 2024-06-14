@@ -340,3 +340,15 @@
 [submodule "package/ef-themes"]
 	path = package/ef-themes
 	url = https://github.com/protesilaos/ef-themes.git
+[submodule "package/smartparens"]
+	path = package/smartparens
+	url = https://github.com/Fuco1/smartparens.git
+[submodule "package/merlin"]
+	path = package/merlin
+	url = https://github.com/ocaml/merlin.git
+[submodule "package/merlin-eldoc"]
+	path = package/merlin-eldoc
+	url = https://github.com/Khady/merlin-eldoc.git
+[submodule "package/lua-mode"]
+	path = package/lua-mode
+	url = https://github.com/immerrr/lua-mode.git
