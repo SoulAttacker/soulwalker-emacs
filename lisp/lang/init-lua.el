@@ -27,7 +27,8 @@
 (defun setup-lua ()
   "Setup lua-mode."
   (require 'lua-mode)
-  (add-to-list 'auto-mode-alist '("\\.lua\\'" . lua-mode)))
+  (add-to-list 'auto-mode-alist '("\\.lua\\'" . lua-mode))
+  (set lua-indent-level 2))
 
 
 (provide 'init-lua)

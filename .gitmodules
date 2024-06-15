@@ -265,9 +265,6 @@
 [submodule "package/popper"]
 	path = package/popper
 	url = https://github.com/karthink/popper.git
-[submodule "package/elisp-tree-sitter"]
-	path = package/elisp-tree-sitter
-	url = https://github.com/emacs-tree-sitter/elisp-tree-sitter
 [submodule "package/evil-goggles"]
 	path = package/evil-goggles
 	url = https://github.com/edkolev/evil-goggles
@@ -352,3 +349,6 @@
 [submodule "package/lua-mode"]
 	path = package/lua-mode
 	url = https://github.com/immerrr/lua-mode.git
+[submodule "package/cask"]
+	path = package/cask
+	url = https://github.com/cask/cask.git

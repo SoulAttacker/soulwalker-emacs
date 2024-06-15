@@ -51,8 +51,8 @@
               acm-enable-preview t)
         (define-key acm-mode-map [tab] 'acm-select-next)
         (define-key acm-mode-map [backtab] 'acm-select-prev)
-        (define-key lsp-bridge-peek-keymap (kbd "C-n" 'lsp-bridge-peek-list-next-line))
-        (define-key lsp-bridge-peek-keymap (kbd "C-p" 'lsp-bridge-peek-list-prev-line))
+        ;;; (define-key lsp-bridge-peek-keymap (kbd "C-n" 'lsp-bridge-peek-list-next-line))
+        ;;; (define-key lsp-bridge-peek-keymap (kbd "C-p" 'lsp-bridge-peek-list-prev-line))
         (add-hook 'prog-mode-hook 'global-lsp-bridge-mode))))
 
 
