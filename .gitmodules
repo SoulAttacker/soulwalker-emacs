@@ -352,3 +352,6 @@
 [submodule "package/cask"]
 	path = package/cask
 	url = https://github.com/cask/cask.git
+[submodule "package/elisp-tree-sitter"]
+	path = package/elisp-tree-sitter
+	url = https://github.com/emacs-tree-sitter/elisp-tree-sitter.git
