@@ -56,7 +56,6 @@
 (setup-company)
 (setup-quickrun)
 (setup-yasnippet)
-(setup-lsp-bridge)
 (setup-git-gutter)
 (setup-tempel)
 
@@ -79,6 +78,7 @@
 (setup-go)
 ;; (setup-clojure-mode)
 (setup-lua)
+(setup-lsp-bridge)
 
 ;; tool setup
 (setup-auto-save)
@@ -103,6 +103,7 @@
 ;; (setup-smart-parens)
 (setup-popper)
 (setup-ace-window)
+;; (setup-pdf-tools)
 
 
 (provide 'setup-all)

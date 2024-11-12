@@ -355,3 +355,6 @@
 [submodule "package/elisp-tree-sitter"]
 	path = package/elisp-tree-sitter
 	url = https://github.com/emacs-tree-sitter/elisp-tree-sitter.git
+[submodule "package/pdf-tools"]
+	path = package/pdf-tools
+	url = https://github.com/vedang/pdf-tools.git

@@ -223,5 +223,9 @@
 
   )
 
+;; some key map in treemacs like:
+;; treemacs-root-up M-H (with Shift)
+;; treemacs-root-down M-L (with Shift)
+
 (provide 'init-general)
 ;;; init-general.el ends here

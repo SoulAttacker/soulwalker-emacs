@@ -38,21 +38,26 @@
               lsp-bridge-enable-hover-diagnostic t
               lsp-bridge-enable-org-babel t
               lsp-bridge-enable-completion-in-string t
-              lsp-bridge-enable-auto-format-code t
+              lsp-bridge-enable-signature-help t
+              lsp-bridge-enable-completion-in-minibuffer t
+              ;; lsp-bridge-signature-show-function 'lsp-bridge-signature-show-with-frame
 
               acm-candidate-match-function 'orderless-regexp
               acm-enable-doc t
               acm-enable-icon t
-              acm-enable-doc-markdown-render 'async
+              ;; acm-enable-doc-markdown-render 'async
+              acm-enable-doc-markdown-render t
               acm-enable-tabnine nil
               acm-enable-search-file-words t
               acm-enable-yas t
               acm-backend-lsp-enable-auto-import t
               acm-enable-preview t)
-        (define-key acm-mode-map [tab] 'acm-select-next)
-        (define-key acm-mode-map [backtab] 'acm-select-prev)
-        ;;; (define-key lsp-bridge-peek-keymap (kbd "C-n" 'lsp-bridge-peek-list-next-line))
-        ;;; (define-key lsp-bridge-peek-keymap (kbd "C-p" 'lsp-bridge-peek-list-prev-line))
+        (define-key acm-mode-map (kbd "TAB") 'acm-select-next)
+        (define-key acm-mode-map (kbd "C-n") 'acm-select-next)
+        (define-key acm-mode-map (kbd "S-TAB") 'acm-select-prev)
+        (define-key acm-mode-map (kbd "C-p") 'acm-select-prev)
+        ;; (define-key lsp-bridge-peek-keymap (kbd "C-n" 'lsp-bridge-peek-list-next-line))
+        ;; (define-key lsp-bridge-peek-keymap (kbd "C-p" 'lsp-bridge-peek-list-prev-line))
         (add-hook 'prog-mode-hook 'global-lsp-bridge-mode))))
 
 

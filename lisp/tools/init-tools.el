@@ -22,5 +22,6 @@
 (require 'init-todo-ivy)
 (require 'init-smart-parens)
 (require 'init-general)
+(require 'init-pdf-tools)
 
 (provide 'init-tools)

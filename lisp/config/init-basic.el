@@ -30,7 +30,7 @@
   "Setup fonts."
   (when (display-graphic-p)
     ;; Set default font
-    (cl-loop for font in '("JetBrainsMono Nerd Font" "Victor Mono" "FantasqueSansM Nerd Font Mono" "Rec Mono Casual" "Cartograph CF"
+    (cl-loop for font in '("FantasqueSansM Nerd Font Mono" "Retro Pixel Cute Mono" "Mx437 IBM VGA 9x16" "JetBrainsMono Nerd Font" "Victor Mono"  "Rec Mono Casual" "Cartograph CF"
                            "Iosevka" "AnonymicePro Nerd Font" "CaskaydiaCove Nerd Font"
                            "PT Mono" "Fira Code" "Jetbrains Mono"
                            "SF Mono" "Hack" "Source Code Pro" "Menlo"
@@ -38,7 +38,8 @@
              when (font-installed-p font)
              return (set-face-attribute 'default nil
                                         :family font
-                                        :height 180))
+                                        ;; :height 180))
+                                        :height 200))
 
     ;; Specify font for all unicode characters
     (cl-loop for font in '("Segoe UI Symbol" "Symbola" "Symbol")
@@ -59,7 +60,7 @@
                       (set-fontset-font t 'emoji (font-spec :family font) nil 'prepend))))
 
     ;; Specify font for Chinese characters
-    (cl-loop for font in '("霞鹜文楷" "Sonti TC" "PingFang SC" "Microsoft Yahei" "STFangsong")
+    (cl-loop for font in '("LXGW WenKai Mono" "Retro Pixel Cute Mono"  "Sonti TC" "PingFang SC" "Microsoft Yahei" "STFangsong")
              when (font-installed-p font)
              return (progn
                       (setq face-font-rescale-alist `((,font . 0.95)))

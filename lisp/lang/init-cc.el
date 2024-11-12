@@ -27,7 +27,7 @@
 (defun setup-cc-mode ()
   "Setup cc-mode."
   (require 'cc-mode)
-  (setq c-basic-offset 4)
+  (setq c-basic-offset 2)
   (setup-cmake-mode))
 
 (defun setup-cmake-mode()
