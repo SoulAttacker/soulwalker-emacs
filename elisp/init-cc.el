@@ -25,6 +25,9 @@
 ;;; Code:
 
 (require 'cc-mode)
+(require 'c-ts-mode)
+(require 'c++-ts-mode)
+
 (setq c-basic-offset soulwalker-indent-width)
 
 
