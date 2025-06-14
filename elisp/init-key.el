@@ -167,17 +167,27 @@
    (("h" . "Window split-horizontally") . split-window-horizontally)
    ))
 
+;; window
 (lazy-load-unset-keys '("s-w"))
 (lazy-load-set-keys
  '(
    ("s-w" . one-key-menu-window)
    ))
 
+;; mark-macro
 (lazy-load-global-keys
  '(
    ("M-m" . one-key-menu-mark-macro)
    )
  "init-markmacro")
+
+;; magit
+(lazy-load-unset-keys '("s-m"))
+(lazy-load-global-keys
+ '(
+   ("s-m" . magit)
+   )
+ "init-magit")
 
 (provide 'init-key)
 ;;; init-key.el ends here
