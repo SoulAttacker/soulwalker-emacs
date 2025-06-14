@@ -1,0 +1,228 @@
+[submodule "package/ns-auto-titlebar"]
+	path = package/ns-auto-titlebar
+	url = https://github.com/purcell/ns-auto-titlebar.git
+[submodule "package/nerd-icons.el"]
+	path = package/nerd-icons.el
+	url = https://github.com/rainstormstudio/nerd-icons.el.git
+[submodule "package/sort-tab"]
+	path = package/sort-tab
+	url = https://github.com/manateelazycat/sort-tab.git
+[submodule "package/emacs-dashboard"]
+	path = package/emacs-dashboard
+	url = https://github.com/emacs-dashboard/emacs-dashboard.git
+[submodule "package/highlight-indent-guides"]
+	path = package/highlight-indent-guides
+	url = https://github.com/DarthFennec/highlight-indent-guides.git
+[submodule "package/awesome-tray"]
+	path = package/awesome-tray
+	url = https://github.com/manateelazycat/awesome-tray.git
+[submodule "package/setup"]
+	path = package/setup
+	url = https://git.sr.ht/~pkal/setup
+[submodule "package/projectile"]
+	path = package/projectile
+	url = https://github.com/bbatsov/projectile.git
+[submodule "package/vertico"]
+	path = package/vertico
+	url = https://github.com/minad/vertico.git
+[submodule "package/consult"]
+	path = package/consult
+	url = https://github.com/minad/consult.git
+[submodule "package/orderless"]
+	path = package/orderless
+	url = https://github.com/oantolin/orderless.git
+[submodule "package/marginalia"]
+	path = package/marginalia
+	url = https://github.com/minad/marginalia.git
+[submodule "package/compat"]
+	path = package/compat
+	url = https://github.com/emacs-compat/compat.git
+[submodule "package/smartparens"]
+	path = package/smartparens
+	url = https://github.com/Fuco1/smartparens.git
+[submodule "package/auto-save"]
+	path = package/auto-save
+	url = https://github.com/manateelazycat/auto-save.git
+[submodule "package/avy"]
+	path = package/avy
+	url = https://github.com/abo-abo/avy.git
+[submodule "package/emacs-which-key"]
+	path = package/emacs-which-key
+	url = https://github.com/justbur/emacs-which-key.git
+[submodule "package/dash.el"]
+	path = package/dash.el
+	url = https://github.com/magnars/dash.el.git
+[submodule "package/treemacs"]
+	path = package/treemacs
+	url = https://github.com/Alexander-Miller/treemacs
+[submodule "package/magit"]
+	path = package/magit
+	url = https://github.com/magit/magit
+[submodule "package/emacs-libvterm"]
+	path = package/emacs-libvterm
+	url = https://github.com/akermu/emacs-libvterm
+[submodule "package/eee.el"]
+	path = package/eee.el
+	url = https://github.com/eval-exec/eee.el
+[submodule "package/default-text-scale"]
+	path = package/default-text-scale
+	url = https://github.com/purcell/default-text-scale.git
+[submodule "package/transwin"]
+	path = package/transwin
+	url = https://github.com/jcs-elpa/transwin
+[submodule "package/popper"]
+	path = package/popper
+	url = https://github.com/karthink/popper
+[submodule "package/ace-window"]
+	path = package/ace-window
+	url = https://github.com/abo-abo/ace-window
+[submodule "package/s.el"]
+	path = package/s.el
+	url = https://github.com/magnars/s.el.git
+[submodule "package/ht.el"]
+	path = package/ht.el
+	url = https://github.com/Wilfred/ht.el.git
+[submodule "package/pfuture"]
+	path = package/pfuture
+	url = https://github.com/Alexander-Miller/pfuture.git
+[submodule "package/hydra"]
+	path = package/hydra
+	url = https://github.com/abo-abo/hydra.git
+[submodule "package/lazycat-theme"]
+	path = package/lazycat-theme
+	url = https://github.com/manateelazycat/lazycat-theme.git
+[submodule "package/lsp-bridge"]
+	path = package/lsp-bridge
+	url = https://github.com/manateelazycat/lsp-bridge.git
+[submodule "package/dape"]
+	path = package/dape
+	url = https://github.com/svaante/dape
+[submodule "package/org-modern"]
+	path = package/org-modern
+	url = https://github.com/minad/org-modern.git
+[submodule "package/markdown-xwidget"]
+	path = package/markdown-xwidget
+	url = https://github.com/cfclrk/markdown-xwidget.git
+[submodule "package/yasnippet"]
+	path = package/yasnippet
+	url = https://github.com/joaotavora/yasnippet
+[submodule "package/yasnippet-snippets"]
+	path = package/yasnippet-snippets
+	url = https://github.com/AndreaCrotti/yasnippet-snippets
+[submodule "package/flycheck"]
+	path = package/flycheck
+	url = https://github.com/flycheck/flycheck
+[submodule "package/cmake-mode"]
+	path = package/cmake-mode
+	url = https://github.com/emacsmirror/cmake-mode
+[submodule "package/rainbow-mode"]
+	path = package/rainbow-mode
+	url = https://github.com/emacsmirror/rainbow-mode
+[submodule "package/yaml-mode"]
+	path = package/yaml-mode
+	url = https://github.com/yoshiki/yaml-mode
+[submodule "package/rust-mode"]
+	path = package/rust-mode
+	url = https://github.com/rust-lang/rust-mode
+[submodule "package/typst-ts-mode"]
+	path = package/typst-ts-mode
+	url = https://codeberg.org/meow_king/typst-ts-mode
+[submodule "package/typst-preview.el"]
+	path = package/typst-preview.el
+	url = https://github.com/havarddj/typst-preview.el
+[submodule "package/lua-mode"]
+	path = package/lua-mode
+	url = https://github.com/immerrr/lua-mode.git
+[submodule "package/geiser"]
+	path = package/geiser
+	url = https://github.com/emacsmirror/geiser
+[submodule "package/caml-mode"]
+	path = package/caml-mode
+	url = https://github.com/ocaml/caml-mode
+[submodule "package/tuareg"]
+	path = package/tuareg
+	url = https://github.com/ocaml/tuareg
+[submodule "package/merlin"]
+	path = package/merlin
+	url = https://github.com/ocaml/merlin
+[submodule "package/merlin-eldoc"]
+	path = package/merlin-eldoc
+	url = https://github.com/Khady/merlin-eldoc
+[submodule "package/haskell-mode"]
+	path = package/haskell-mode
+	url = https://github.com/haskell/haskell-mode.git
+[submodule "package/treesit-auto"]
+	path = package/treesit-auto
+	url = https://github.com/renzmann/treesit-auto
+[submodule "package/apheleia"]
+	path = package/apheleia
+	url = https://github.com/radian-software/apheleia
+[submodule "package/separedit.el"]
+	path = package/separedit.el
+	url = https://github.com/twlz0ne/separedit.el
+[submodule "package/markdown-mode"]
+	path = package/markdown-mode
+	url = https://github.com/jrblevin/markdown-mode.git
+[submodule "package/mustache.el"]
+	path = package/mustache.el
+	url = https://github.com/Wilfred/mustache.el.git
+[submodule "package/f.el"]
+	path = package/f.el
+	url = https://github.com/rejeep/f.el.git
+[submodule "package/emacs-websocket"]
+	path = package/emacs-websocket
+	url = https://github.com/ahyatt/emacs-websocket.git
+[submodule "package/edit-indirect"]
+	path = package/edit-indirect
+	url = https://github.com/Fanael/edit-indirect.git
+[submodule "package/prescient.el"]
+	path = package/prescient.el
+	url = https://github.com/radian-software/prescient.el.git
+[submodule "package/one-key"]
+	path = package/one-key
+	url = https://github.com/manateelazycat/one-key.git
+[submodule "package/thing-edit"]
+	path = package/thing-edit
+	url = https://github.com/manateelazycat/thing-edit.git
+[submodule "package/general.el"]
+	path = package/general.el
+	url = https://github.com/noctuid/general.el
+[submodule "package/multi-vterm"]
+	path = package/multi-vterm
+	url = https://github.com/suonlight/multi-vterm.git
+[submodule "package/nerd-icons-completion"]
+	path = package/nerd-icons-completion
+	url = https://github.com/rainstormstudio/nerd-icons-completion.git
+[submodule "package/markmacro"]
+	path = package/markmacro
+	url = https://github.com/manateelazycat/markmacro.git
+[submodule "package/vundo"]
+	path = package/vundo
+	url = https://github.com/casouri/vundo.git
+[submodule "package/blink-search"]
+	path = package/blink-search
+	url = https://github.com/manateelazycat/blink-search.git
+[submodule "package/llama"]
+	path = package/llama
+	url = https://github.com/tarsius/llama.git
+[submodule "package/with-editor"]
+	path = package/with-editor
+	url = https://github.com/magit/with-editor.git
+[submodule "package/transient"]
+	path = package/transient
+	url = https://github.com/magit/transient.git
+[submodule "package/dirvish"]
+	path = package/dirvish
+	url = https://github.com/alexluigit/dirvish.git
+[submodule "package/symbol-overlay"]
+	path = package/symbol-overlay
+	url = https://github.com/wolray/symbol-overlay.git
+[submodule "package/fingertip"]
+	path = package/fingertip
+	url = https://github.com/manateelazycat/fingertip
+[submodule "package/lazy-load"]
+	path = package/lazy-load
+	url = https://github.com/manateelazycat/lazy-load.git
+[submodule "package/rainbow-delimiters"]
+	path = package/rainbow-delimiters
+	url = https://github.com/Fanael/rainbow-delimiters.git

@@ -1,0 +1,12 @@
+tree-sitter/*
+blink-search/
+blink-search.db
+projects
+.cache/
+eln-cache/*
+projectile-bookmarks.eld
+recentf
+auto-save-list/*
+.local/*
+org
+tramp
