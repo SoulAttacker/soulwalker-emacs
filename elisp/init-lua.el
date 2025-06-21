@@ -25,6 +25,7 @@
 ;;; Code:
 
 (require 'lua-mode)
+(require 'lua-ts-mode)
 
 (setq lua-indent-level soulwalker-indent-width)
 

@@ -44,7 +44,7 @@
    ("M-[" . sort-tab-select-prev-tab)
    ("M-]" . sort-tab-select-next-tab)
    ("M-d" . kill-word)
-   ("M-S-d" . backward-kill-word)
+   ("M-D" . backward-kill-word)
    ("M-;" . comment-line)
    ("C-h r" . restart-emacs)
    ))

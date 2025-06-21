@@ -144,7 +144,7 @@ The test for presence of the car of ELT-CONS is done with `equal'."
 (autoload 'go-ts-mode "init-go")
 (autoload 'rust-ts-mode "init-rust")
 (autoload 'python-ts-mode "init-python")
-(autoload 'lua-ts-mode "init-lua")
+(autoload 'lua-mode "init-lua")
 (autoload 'haskell-ts-mode "haskell-mode")
 (autoload 'json-mode "json-mode")
 (autoload 'c++-ts-mode "init-cc")
