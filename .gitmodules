@@ -226,3 +226,6 @@
 [submodule "package/rainbow-delimiters"]
 	path = package/rainbow-delimiters
 	url = https://github.com/Fanael/rainbow-delimiters.git
+[submodule "package/ef-themes"]
+	path = package/ef-themes
+	url = https://github.com/protesilaos/ef-themes.git

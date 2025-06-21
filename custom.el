@@ -24,8 +24,8 @@
 
 ;;; Code:
 
-;; user info
-(setq user-mail-address "")
+;; default theme only in `ef-summer` or `lazycat-theme`
+(setq soulwalker-theme 'ef-summer)
 
 ;; wheather to enable winner-mode
 (setq soulwalker-active-winner-mode nil)

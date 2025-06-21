@@ -47,8 +47,7 @@
 
   ;; without output of plugin loading
   (with-temp-message ""
-    (require 'lazycat-theme)
-    (lazycat-theme-load-dark)
+    (require 'init-theme)
     (require 'init-basic)
     (require 'init-ns-auto-titlebar)
     (require 'init-utils)
