@@ -229,3 +229,6 @@
 [submodule "package/ef-themes"]
 	path = package/ef-themes
 	url = https://github.com/protesilaos/ef-themes.git
+[submodule "package/cfrs"]
+	path = package/cfrs
+	url = https://github.com/Alexander-Miller/cfrs.git
