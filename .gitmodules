@@ -232,3 +232,6 @@
 [submodule "package/cfrs"]
 	path = package/cfrs
 	url = https://github.com/Alexander-Miller/cfrs.git
+[submodule "package/posframe"]
+	path = package/posframe
+	url = https://github.com/tumashu/posframe.git
