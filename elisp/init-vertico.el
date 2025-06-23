@@ -26,8 +26,9 @@
 
 (when (eq soulwalker-completion-mechanism 'vertico)
   (require 'vertico)
+  (require 'vertico-directory)
   (vertico-mode 1)
-  )
+  (define-key vertico-map (kbd "M-DEL") 'vertico-directory-delete-word))
 
 (provide 'init-vertico)
 ;;; init-vertico.el ends here
