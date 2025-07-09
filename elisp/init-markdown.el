@@ -24,7 +24,9 @@
 
 ;;; Code:
 
-(require markdown-xwidget)
+(require 'markdown-mode)
+(require 'markdown-ts-mode)
+(require 'markdown-xwidget)
 
 (provide 'init-markdown)
 ;;; init-markdown.el ends here

@@ -140,7 +140,7 @@ The test for presence of the car of ELT-CONS is done with `equal'."
 (autoload 'prog-mode "init-prog-mode")
 (autoload 'org-mode "init-org")
 (autoload 'cmake-mode "cmake-mode")
-(autoload 'markdown-mode "init-markdown")
+(autoload 'markdown-ts-mode "init-markdown")
 (autoload 'go-ts-mode "init-go")
 (autoload 'rust-ts-mode "init-rust")
 (autoload 'python-ts-mode "init-python")

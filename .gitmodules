@@ -235,3 +235,6 @@
 [submodule "package/posframe"]
 	path = package/posframe
 	url = https://github.com/tumashu/posframe.git
+[submodule "package/markdown-ts-mode"]
+	path = package/markdown-ts-mode
+	url = https://github.com/LionyxML/markdown-ts-mode.git
