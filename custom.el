@@ -25,7 +25,7 @@
 ;;; Code:
 
 ;; default theme only in `ef-summer` or `lazycat-theme`
-(setq soulwalker-theme 'ef-summer)
+(setq soulwalker-theme 'lazycat-theme)
 
 ;; wheather to enable winner-mode
 (setq soulwalker-active-winner-mode nil)
@@ -49,7 +49,7 @@
 (setq soulwalker-icons-mode 'nerd-icons)
 
 ;; indent width
-(setq soulwalker-indent-width 2)
+(setq soulwalker-indent-width 4)
 
 ;; default python path
 (defvar soulwalker-default-python "~/.venv/base/bin/python")

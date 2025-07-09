@@ -1,9 +1,9 @@
-;;; init-dashboard.el --- dashboard config           -*- lexical-binding: t; -*-
+;;; init-quick-indent.el --- quick-indent config     -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2025  soulwalker
 
 ;; Author: soulwalker <soulwalker@soulwalkerdeMac-Studio.local>
-;; Keywords: dashboard
+;; Keywords:
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -24,21 +24,8 @@
 
 ;;; Code:
 
-(require 'dashboard)
-(require 'projectile)
+(require 'quick-indent)
+(setq quick-indent-offset soulwalker-indent-width)
 
-(setq
- dashboard-startup-banner (concat user-emacs-directory "etc/logo_scale.png")
- dashboard-banner-logo-title "Welcome to SoulWalker's Emacs! Love ya~"
- dashboard-center-content t
- dashboard-show-shortcuts t
- dashboard-set-file-icons t
- dashboard-projects-backend 'projectile
- dashboard-items '((recents . 10)
-                   (projects . 5)))
-
-;; refresh dashboard
-(dashboard-refresh-buffer)
-
-(provide 'init-dashboard)
-;;; init-dashboard.el ends here
+(provide 'init-quick-indent)
+;;; init-quick-indent.el ends here

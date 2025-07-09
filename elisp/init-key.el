@@ -145,6 +145,14 @@
    )
  "init-move-text")
 
+;; quick-indent
+(lazy-load-global-keys
+ '(
+   ("C->" . quick-indent-forward)
+   ("C-<" . quick-indent-backward)
+   )
+ "init-quick-indent")
+
 ;; open new line
 (lazy-load-global-keys
  '(

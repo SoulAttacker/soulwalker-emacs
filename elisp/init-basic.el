@@ -54,7 +54,6 @@
 (setq-default indent-tabs-mode nil
               tab-width        soulwalker-indent-width)
 
-
 ;; replace command key with meta key in mac
 (when *is-mac*
   (setq mac-command-modifier 'meta)
