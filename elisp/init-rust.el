@@ -29,5 +29,12 @@
 
 (setq rust-indent-offset soulwalker-indent-width)
 
+(lazy-load-set-keys
+ '(("C-c b" . rust-compile)
+   ("C-c r" . rust-run)
+   ("C-c t" . rust-test)
+   ("C-c k" . rust-check))
+ rust-ts-mode-map)
+
 (provide 'init-rust)
 ;;; init-rust.el ends here

@@ -238,3 +238,15 @@
 [submodule "package/markdown-ts-mode"]
 	path = package/markdown-ts-mode
 	url = https://github.com/LionyxML/markdown-ts-mode.git
+[submodule "package/zig-ts-mode"]
+	path = package/zig-ts-mode
+	url = https://codeberg.org/meow_king/zig-ts-mode.git
+[submodule "package/zig-mode"]
+	path = package/zig-mode
+	url = https://github.com/ziglang/zig-mode.git
+[submodule "package/emacs-reformatter"]
+	path = package/emacs-reformatter
+	url = https://github.com/purcell/emacs-reformatter.git
+[submodule "package/nimbus-theme"]
+	path = package/nimbus-theme
+	url = https://github.com/mrcnski/nimbus-theme.git

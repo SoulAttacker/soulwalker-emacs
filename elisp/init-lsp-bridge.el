@@ -25,6 +25,7 @@
 ;;; Code:
 
 (require 'lsp-bridge)
+
 (when (eq soulwalker-lsp-client 'lsp-bridge)
   (setq
    lsp-bridge-python-command soulwalker-default-python

@@ -151,6 +151,8 @@ The test for presence of the car of ELT-CONS is done with `equal'."
 (autoload 'c-ts-mode "init-cc")
 (autoload 'yaml-mode "init-yaml")
 (autoload 'typst-ts-mode "init-typst")
+(autoload 'zig-mode "init-zig")
+(autoload 'zig-ts-mode "init-zig")
 
 (provide 'init-mode)
 ;;; init-mode.el ends here

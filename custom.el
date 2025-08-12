@@ -25,7 +25,7 @@
 ;;; Code:
 
 ;; default theme only in `ef-summer` or `lazycat-theme`
-(setq soulwalker-theme 'lazycat-theme)
+(setq soulwalker-theme 'nimbus)
 
 ;; wheather to enable winner-mode
 (setq soulwalker-active-winner-mode nil)

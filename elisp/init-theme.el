@@ -32,10 +32,16 @@
   (require 'ef-themes)
   (ef-themes-select 'ef-summer))
 
+(defun setup-nimbus ()
+  (require 'nimbus-theme)
+  (load-theme 'nimbus t))
+
 (cond ((eq soulwalker-theme 'ef-summer)
        (setup-ef-summer))
       ((eq soulwalker-theme 'lazycat-theme)
-       (setup-lazycat-theme)))
+       (setup-lazycat-theme))
+      ((eq soulwalker-theme 'nimbus)
+       (setup-nimbus)))
 
 (provide 'init-theme)
 ;;; init-theme.el ends here

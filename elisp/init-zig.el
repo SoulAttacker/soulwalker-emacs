@@ -1,9 +1,9 @@
-;;; init-ace-window.el --- ace-window config         -*- lexical-binding: t; -*-
+;;; init-zig.el --- zig config                       -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2025  soulwalker
 
-;; Author: soulwalker
-;; Keywords:
+;; Author: soulwalker <soulwalker@soulwalkerdeMac-Studio.local>
+;; Keywords: zig
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -24,16 +24,26 @@
 
 ;;; Code:
 
-(require 'ace-window)
+(require 'zig-mode)
+(require 'zig-ts-mode)
 
-(setq
- aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)
- aw-ignore-buffers '("*sort-tab*"))
-(add-to-list 'aw-ignored-buffers "*sort-tab*")
+(with-eval-after-load 'zig-mode
+  (when (treesit-ready-p 'zig)
+    (zig-ts-mode)))
 
-(custom-set-faces
- '(aw-leading-char-face
-   ((t (:inherit ace-jump-face-foreground :height 3.0)))))
+(add-hook 'zig-mode-hook
+          (lambda ()
+            (when (treesit-language-available-p 'zig)
+              (when (fboundp 'zig-ts-mode)
+                (zig-ts-mode)))))
 
-(provide 'init-ace-window)
-;;; init-ace-window.el ends here
+(setq zig-indent-offset soulwalker-indent-width)
+
+(lazy-load-set-keys
+ '(("C-c b" . zig-compile)
+   ("C-c r" . zig-run)
+   ("C-c t" . zig-test-buffer))
+ zig-ts-mode-map)
+
+(provide 'init-zig)
+;;; init-zig.el ends here

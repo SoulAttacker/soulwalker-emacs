@@ -68,7 +68,8 @@
         (vue . ("https://github.com/merico-dev/tree-sitter-vue"))
         (kotlin . ("https://github.com/fwcd/tree-sitter-kotlin"))
         (yaml . ("https://github.com/ikatyang/tree-sitter-yaml"))
-        (zig . ("https://github.com/GrayJack/tree-sitter-zig"))
+        ;; (zig . ("https://github.com/GrayJack/tree-sitter-zig"))
+        (zig . ("https://github.com/maxxnino/tree-sitter-zig")) ;; but this is deprecated
         (clojure . ("https://github.com/sogaiu/tree-sitter-clojure"))
         (nix . ("https://github.com/nix-community/nix-ts-mode"))
         (mojo . ("https://github.com/HerringtonDarkholme/tree-sitter-mojo"))))
@@ -91,10 +92,12 @@
         (markdown-mode   . markdown-ts-mode)
         (yaml-mode       . yaml-ts-mode)
         (go-mode         . go-ts-mode)
+        (zig-mode        . zig-ts-mode)
         ))
 
 (add-hook 'markdown-mode-hook #'(lambda () (treesit-parser-create 'markdown)))
 (add-hook 'zig-mode-hook #'(lambda () (treesit-parser-create 'zig)))
+(add-hook 'zig-ts-mode-hook #'(lambda () (treesit-parser-create 'zig)))
 (add-hook 'emacs-lisp-mode-hook #'(lambda () (treesit-parser-create 'elisp)))
 (add-hook 'ielm-mode-hook #'(lambda () (treesit-parser-create 'elisp)))
 (add-hook 'json-mode-hook #'(lambda () (treesit-parser-create 'json)))
