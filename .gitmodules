@@ -18,7 +18,7 @@
 	url = https://github.com/manateelazycat/awesome-tray.git
 [submodule "package/setup"]
 	path = package/setup
-	url = https://git.sr.ht/~pkal/setup
+	url = https://codeberg.org/pkal/setup.el.git
 [submodule "package/projectile"]
 	path = package/projectile
 	url = https://github.com/bbatsov/projectile.git
