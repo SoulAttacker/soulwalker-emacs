@@ -48,9 +48,9 @@
   ;; without output of plugin loading
   (with-temp-message ""
     (require 'init-theme)
+    (require 'init-utils)
     (require 'init-basic)
     (require 'init-ns-auto-titlebar)
-    (require 'init-utils)
     (require 'init-dashboard)
     (require 'init-awesome-tray)
     (require 'init-one-key)

@@ -82,7 +82,7 @@
            when (font-installed-p font)
            return (set-face-attribute 'default nil
                                       :family font
-                                      :height 200))
+                                      :height 130))
 
   ;; Specify font for all unicode characters
   (cl-loop for font in '("Segoe UI Symbol" "Symbola" "Symbol")
@@ -199,6 +199,20 @@ Returns the names of envvars that were changed."
 
 ;; highlight current line
 ;; (global-hl-line-mode)
+
+;; for hyprland
+(when (and (display-graphic-p) (is-hyprland))
+  ;; set off all gui decoration
+  (set-frame-parameter nil 'undecorated t)
+  (setq default-frame-alist
+        '((tool-bar-lines . 0)
+          (menu-bar-lines . 0)
+          (vertical-scroll-bars . nil)
+          (horizontal-scroll-bars . nil)
+          (alpha . 90)))
+
+  (setq x-gtk-use-system-tooltips nil)
+  (setq x-gtk-resize-child-frames 'resize-mode))
 
 
 (provide 'init-basic)

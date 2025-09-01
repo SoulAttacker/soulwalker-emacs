@@ -69,5 +69,10 @@
           (message "Activated UV Python environment at %s" venv-path))
       (error "No UV Python environment found in %s" project-root))))
 
+(defun is-hyprland()
+  (or (getenv "HYPRLAND_INSTANCE_SIGNATURE")
+      (string-match-p "hyprland" (getenv "XDG_CURRENT_DESKTOP" ""))))
+
+
 (provide 'init-utils)
 ;;; init-utils.el ends here
