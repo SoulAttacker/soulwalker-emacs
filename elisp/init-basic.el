@@ -76,7 +76,7 @@
   ;; Set default font
   (cl-loop for font in '("Aporetic Sans Mono" "Maple Mono NF CN" "M+CodeLat50 Nerd Font Mono" "Pragmasevka" "FantasqueSansM Nerd Font Mono" "0xProto Nerd Font" "Retro Pixel Cute Mono"
                          "Mx437 IBM VGA 9x16" "Victor Mono"  "Rec Mono Casual" "Cartograph CF" "Iosevka" "AnonymicePro Nerd Font" "CaskaydiaCove Nerd Font"
-                         "PT Mono" "Fira Code" "Jetbrains Mono"
+                         "PT Mono" "Fira Code" "Jetbrains Mono Nerd Font"
                          "SF Mono" "Hack" "Source Code Pro" "Menlo"
                          "Monaco" "DejaVu Sans Mono" "CozetteVector")
            when (font-installed-p font)
