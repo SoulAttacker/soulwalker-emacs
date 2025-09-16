@@ -72,6 +72,7 @@
         (zig . ("https://github.com/maxxnino/tree-sitter-zig")) ;; but this is deprecated
         (clojure . ("https://github.com/sogaiu/tree-sitter-clojure"))
         (nix . ("https://github.com/nix-community/nix-ts-mode"))
+        (qmljs . ("https://github.com/yuja/tree-sitter-qmljs"))
         (mojo . ("https://github.com/HerringtonDarkholme/tree-sitter-mojo"))))
 
 ;; mode remap
@@ -93,6 +94,7 @@
         (yaml-mode       . yaml-ts-mode)
         (go-mode         . go-ts-mode)
         (zig-mode        . zig-ts-mode)
+        (qml-mode        . qml-ts-mode)
         ))
 
 (add-hook 'markdown-mode-hook #'(lambda () (treesit-parser-create 'markdown)))
@@ -106,6 +108,7 @@
 (add-hook 'java-ts-mode-hook #'(lambda () (treesit-parser-create 'java)))
 (add-hook 'php-mode-hook #'(lambda () (treesit-parser-create 'php)))
 (add-hook 'php-ts-mode-hook #'(lambda () (treesit-parser-create 'php)))
+(add-hook 'qml-mode-hook #'(lambda() (treesit-parser-create 'qmljs)))
 
 (provide 'init-treesit)
 ;;; init-treesit.el ends here

@@ -250,3 +250,6 @@
 [submodule "package/nimbus-theme"]
 	path = package/nimbus-theme
 	url = https://github.com/mrcnski/nimbus-theme.git
+[submodule "package/qml-ts-mode"]
+	path = package/qml-ts-mode
+	url = https://github.com/xhcoding/qml-ts-mode.git

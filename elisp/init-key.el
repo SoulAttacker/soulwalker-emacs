@@ -47,6 +47,7 @@
    ("M-D" . backward-kill-word)
    ("M-;" . comment-line)
    ("C-h r" . restart-emacs)
+   ("s-u" . revert-buffer)
    ))
 
 ;; avy

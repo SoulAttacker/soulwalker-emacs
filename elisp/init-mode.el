@@ -132,6 +132,7 @@ The test for presence of the car of ELT-CONS is done with `equal'."
                     ("\\.yml$" . yaml-mode)
                     ("\\.yaml$" . yaml-mode)
                     ("\\.typ" . typst-ts-mode)
+                    ("\\.qml$" . qml-mode)
                     ))
   (add-to-alist 'auto-mode-alist elt-cons))
 
@@ -153,6 +154,8 @@ The test for presence of the car of ELT-CONS is done with `equal'."
 (autoload 'typst-ts-mode "init-typst")
 (autoload 'zig-mode "init-zig")
 (autoload 'zig-ts-mode "init-zig")
+(autoload 'qml-mode "init-qml")
+(autoload 'qml-ts-mode "init-qml")
 
 (provide 'init-mode)
 ;;; init-mode.el ends here
