@@ -156,6 +156,8 @@ The test for presence of the car of ELT-CONS is done with `equal'."
 (autoload 'zig-ts-mode "init-zig")
 (autoload 'qml-mode "init-qml")
 (autoload 'qml-ts-mode "init-qml")
+(autoload 'nix-mode "init-nix")
+(autoload 'nix-ts-mode "init-nix")
 
 (provide 'init-mode)
 ;;; init-mode.el ends here

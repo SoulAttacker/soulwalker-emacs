@@ -253,3 +253,6 @@
 [submodule "package/qml-ts-mode"]
 	path = package/qml-ts-mode
 	url = https://github.com/xhcoding/qml-ts-mode.git
+[submodule "package/nix-ts-mode"]
+	path = package/nix-ts-mode
+	url = https://github.com/nix-community/nix-ts-mode.git

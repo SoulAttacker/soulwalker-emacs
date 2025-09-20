@@ -32,6 +32,17 @@
 ;; `treesit-install-language-grammar` download library to `treesit-extra-load-path`
 (setq treesit--install-language-grammar-out-dir-history treesit-extra-load-path)
 
+(defun treesit-install-all-languages ()
+  "Install all Tree-sitter language grammars defined in `treesit-language-source-alist`."
+  (interactive)
+  (dolist (lang treesit-language-source-alist)
+    (let ((language (car lang)))
+      (message "Installing Tree-sitter grammar for: %s..." language)
+      (condition-case err
+          (treesit-install-language-grammar language)
+        (error (message "Failed to install %s: %s" language err)))))
+  (message "All available Tree-sitter grammars attempted to install."))
+
 ;; M-x `treesit-install-language-grammar` to install language grammar.
 (setq treesit-language-source-alist
       '((bash . ("https://github.com/tree-sitter/tree-sitter-bash"))
@@ -71,7 +82,7 @@
         ;; (zig . ("https://github.com/GrayJack/tree-sitter-zig"))
         (zig . ("https://github.com/maxxnino/tree-sitter-zig")) ;; but this is deprecated
         (clojure . ("https://github.com/sogaiu/tree-sitter-clojure"))
-        (nix . ("https://github.com/nix-community/nix-ts-mode"))
+        (nix . ("https://github.com/nix-community/tree-sitter-nix"))
         (qmljs . ("https://github.com/yuja/tree-sitter-qmljs"))
         (mojo . ("https://github.com/HerringtonDarkholme/tree-sitter-mojo"))))
 
@@ -95,6 +106,8 @@
         (go-mode         . go-ts-mode)
         (zig-mode        . zig-ts-mode)
         (qml-mode        . qml-ts-mode)
+        (nix-mode        . nix-ts-mode)
+        (nix-ts-mode     . nix-ts-mode)
         ))
 
 (add-hook 'markdown-mode-hook #'(lambda () (treesit-parser-create 'markdown)))
@@ -109,6 +122,7 @@
 (add-hook 'php-mode-hook #'(lambda () (treesit-parser-create 'php)))
 (add-hook 'php-ts-mode-hook #'(lambda () (treesit-parser-create 'php)))
 (add-hook 'qml-mode-hook #'(lambda() (treesit-parser-create 'qmljs)))
+(add-hook 'nix-ts-mode-hook #'(lambda() (treesit-parser-create 'nix)))
 
 (provide 'init-treesit)
 ;;; init-treesit.el ends here
