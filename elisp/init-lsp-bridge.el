@@ -39,6 +39,7 @@
    lsp-bridge-enable-completion-in-string t
    lsp-bridge-enable-signature-help t
    lsp-bridge-enable-competion-in-minibuffer t
+   lsp-bridge-completion-obey-trigger-characters-p nil
 
    acm-enable-doc t
    acm-enable-icon t
