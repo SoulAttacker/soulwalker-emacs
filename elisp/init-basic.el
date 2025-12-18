@@ -180,9 +180,6 @@ Returns the names of envvars that were changed."
   (setq url-proxy-services nil)
   (message "Proxy unset!"))
 
-;; default set proxy
-(set-proxy)
-
 ;; basic ui
 (setq inhibit-startup-message t  ;; disable startup page
       scroll-step             1  ;; scroll-step to 1
