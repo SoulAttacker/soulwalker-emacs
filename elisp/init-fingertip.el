@@ -107,8 +107,8 @@
 (define-key fingertip-mode-map (kbd "M-(") 'fingertip-wrap-round)
 (define-key fingertip-mode-map (kbd "M-)") 'fingertip-unwrap)
 
-(define-key fingertip-mode-map (kbd "M-p") 'fingertip-jump-right)
-(define-key fingertip-mode-map (kbd "M-n") 'fingertip-jump-left)
+(define-key fingertip-mode-map (kbd "M-S-p") 'fingertip-jump-right)
+(define-key fingertip-mode-map (kbd "M-S-n") 'fingertip-jump-left)
 (define-key fingertip-mode-map (kbd "M-:") 'fingertip-jump-out-pair-and-newline)
 
 (define-key fingertip-mode-map (kbd "C-j") 'fingertip-jump-up)
