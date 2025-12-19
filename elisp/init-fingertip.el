@@ -43,6 +43,7 @@
                'python-mode-hook
                'js-mode-hook
                'go-mode-hook
+               'go-ts-mode-hook
                'qml-mode-hook
                'jade-mode-hook
                'css-mode-hook
