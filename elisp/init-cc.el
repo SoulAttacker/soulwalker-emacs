@@ -28,7 +28,9 @@
 (require 'c-ts-mode)
 (require 'c++-ts-mode)
 
-(setq c-basic-offset soulwalker-indent-width)
+(setq c-basic-offset soulwalker-indent-width
+      c-ts-mode-indent-offset soulwalker-indent-width)
+
 
 
 (provide 'init-cc)
