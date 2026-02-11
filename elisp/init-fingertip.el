@@ -97,13 +97,13 @@
 (define-key fingertip-mode-map (kbd "SPC") 'fingertip-space)
 (define-key fingertip-mode-map (kbd "RET") 'fingertip-newline)
 
-(define-key fingertip-mode-map (kbd "M-o") 'fingertip-backward-delete)
-(define-key fingertip-mode-map (kbd "C-d") 'fingertip-forward-delete)
-(define-key fingertip-mode-map (kbd "C-k") 'fingertip-kill)
+;; (define-key fingertip-mode-map (kbd "M-o") 'fingertip-backward-delete)
+;; (define-key fingertip-mode-map (kbd "C-d") 'fingertip-forward-delete)
+;; (define-key fingertip-mode-map (kbd "C-k") 'fingertip-kill)
 
 (define-key fingertip-mode-map (kbd "M-\"") 'fingertip-wrap-double-quote)
 (define-key fingertip-mode-map (kbd "M-'") 'fingertip-wrap-single-quote)
-(define-key fingertip-mode-map (kbd "M-[") 'fingertip-wrap-bracket)
+;; (define-key fingertip-mode-map (kbd "M-[") 'fingertip-wrap-bracket)
 (define-key fingertip-mode-map (kbd "M-{") 'fingertip-wrap-curly)
 (define-key fingertip-mode-map (kbd "M-(") 'fingertip-wrap-round)
 (define-key fingertip-mode-map (kbd "M-)") 'fingertip-unwrap)
@@ -112,7 +112,7 @@
 (define-key fingertip-mode-map (kbd "M-S-n") 'fingertip-jump-left)
 (define-key fingertip-mode-map (kbd "M-:") 'fingertip-jump-out-pair-and-newline)
 
-(define-key fingertip-mode-map (kbd "C-j") 'fingertip-jump-up)
+;; (define-key fingertip-mode-map (kbd "C-j") 'fingertip-jump-up)
 
 (provide 'init-fingertip)
 ;;; init-fingertip.el ends here

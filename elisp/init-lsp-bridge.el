@@ -62,8 +62,10 @@
    (("f" . "LSP format-buffer") . apheleia-format-buffer)
    (("h" . "LSP peek-reference") . lsp-bridge-find-references)
    (("i" . "LSP find-impl") . lsp-bridge-find-impl)
+   (("k" . "LSP find-doc") . lsp-bridge-popup-documentation)
    (("r" . "LSP rename") . lsp-bridge-rename)
    (("p" . "LSP peek") . lsp-bridge-peek)
+   (("R" . "LSP restart-server") . lsp-bridge-restart-process)
    )
  t)
 
