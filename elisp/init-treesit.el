@@ -76,6 +76,7 @@
         (sql . ("https://github.com/m-novikov/tree-sitter-sql"))
         (scala "https://github.com/tree-sitter/tree-sitter-scala" "master" "src" nil nil)
         (toml "https://github.com/tree-sitter/tree-sitter-toml" "master" "src" nil nil)
+        (typst . ("https://github.com/uben0/tree-sitter-typst"))
         (vue . ("https://github.com/merico-dev/tree-sitter-vue"))
         (kotlin . ("https://github.com/fwcd/tree-sitter-kotlin"))
         (yaml . ("https://github.com/ikatyang/tree-sitter-yaml"))
@@ -108,6 +109,8 @@
         (qml-mode        . qml-ts-mode)
         (nix-mode        . nix-ts-mode)
         (nix-ts-mode     . nix-ts-mode)
+        (typst-mode      . typst-ts-mode)
+        (typst-ts-mode      . typst-ts-mode)
         ))
 
 (add-hook 'markdown-mode-hook #'(lambda () (treesit-parser-create 'markdown)))
@@ -123,6 +126,7 @@
 (add-hook 'php-ts-mode-hook #'(lambda () (treesit-parser-create 'php)))
 (add-hook 'qml-mode-hook #'(lambda() (treesit-parser-create 'qmljs)))
 (add-hook 'nix-ts-mode-hook #'(lambda() (treesit-parser-create 'nix)))
+(add-hook 'typst-ts-mode-hook #'(lambda() (treesit-parser-create 'typst)))
 
 (provide 'init-treesit)
 ;;; init-treesit.el ends here
