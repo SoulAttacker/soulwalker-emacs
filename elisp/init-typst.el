@@ -31,7 +31,7 @@
  typst-ts-mode-indent-offset soulwalker-indent-width
  typst-ts-mode-watch-options "--open")
 
-(add-hook 'typst-ts-mode smartparens-mode)
+;; (add-hook 'typst-ts-mode smartparens-mode)
 (add-hook 'typst-ts-mode lsp-bridge-mode)
 
 (setq typst-preview-browser "xwidget"
