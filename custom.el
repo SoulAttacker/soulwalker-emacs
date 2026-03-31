@@ -52,7 +52,7 @@
 (setq soulwalker-indent-width 4)
 
 ;; default python path
-(defvar soulwalker-default-python "~/.venv/base/bin/python")
+(defvar soulwalker-default-python "~/.config/emacs/.venv/bin/python")
 
 
 (provide 'custom)

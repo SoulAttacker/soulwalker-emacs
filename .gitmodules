@@ -256,3 +256,6 @@
 [submodule "package/nix-ts-mode"]
 	path = package/nix-ts-mode
 	url = https://github.com/nix-community/nix-ts-mode.git
+[submodule "package/hl-todo"]
+	path = package/hl-todo
+	url = https://github.com/tarsius/hl-todo.git

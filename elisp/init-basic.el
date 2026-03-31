@@ -48,7 +48,8 @@
 
 ;; pair highlight
 (show-paren-mode 1)
-(set-face-attribute 'show-paren-match nil :background "cyan" :underline t)
+;; (set-face-attribute 'show-paren-match nil :background "cyan" :underline t)
+(set-face-attribute 'show-paren-match nil :background "#60686c" :underline t)
 
 ;; tab initialize
 (setq-default indent-tabs-mode nil
@@ -206,7 +207,8 @@ Returns the names of envvars that were changed."
           (menu-bar-lines . 0)
           (vertical-scroll-bars . nil)
           (horizontal-scroll-bars . nil)
-          (alpha . 90)))
+          (alpha . 100)))
+          ;; (alpha . 90)))
 
   (setq x-gtk-use-system-tooltips nil)
   (setq x-gtk-resize-child-frames 'resize-mode))

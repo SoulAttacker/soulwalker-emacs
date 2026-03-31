@@ -40,6 +40,7 @@
    lsp-bridge-enable-signature-help t
    lsp-bridge-enable-competion-in-minibuffer t
    lsp-bridge-completion-obey-trigger-characters-p nil
+   lsp-bridge-semantic-tokens-mode t
 
    acm-enable-doc t
    acm-enable-icon t

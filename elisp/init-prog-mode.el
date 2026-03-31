@@ -26,6 +26,7 @@
 
 (require 'symbol-overlay)
 (require 'yasnippet)
+(require 'init-todo)
 
 ;; display line number
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
@@ -56,7 +57,11 @@
   (require 'flymake)
   (add-hook 'prog-mode-hook 'flymake-mode))
 
+;; symbol-overlay
 (add-hook 'prog-mode-hook 'symbol-overlay-mode)
+
+;; hl-todo
+(add-hook 'prog-mode-hook 'hl-todo-mode)
 
 (provide 'init-prog-mode)
 ;;; init-prog-mode.el ends here

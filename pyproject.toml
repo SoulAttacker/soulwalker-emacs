@@ -1,0 +1,19 @@
+[project]
+name = "emacs"
+version = "0.1.0"
+description = "lsp-bridge python setup"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "epc>=0.0.5",
+    "orjson>=3.11.7",
+    "packaging>=26.0",
+    "paramiko>=4.0.0",
+    "pec>=2.0.1",
+    "rapidfuzz>=3.14.3",
+    "requests>=2.32.5",
+    "setuptools>=82.0.0",
+    "sexpdata>=1.0.2",
+    "six>=1.17.0",
+    "watchdog>=6.0.0",
+]
