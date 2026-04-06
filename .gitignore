@@ -11,3 +11,5 @@ auto-save-list/*
 org
 tramp
 .venv
+blink-search.db
+blink-search/
