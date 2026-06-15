@@ -101,11 +101,16 @@
 
 ;; vterm
 (lazy-load-unset-keys '("M-t"))
+;; (lazy-load-global-keys
+;;  '(
+;;    ("M-t" . one-key-menu-vterm)
+;;    )
+;;  "init-vterm")
 (lazy-load-global-keys
  '(
-   ("M-t" . one-key-menu-vterm)
+   ("M-t" . one-key-menu-gterm)
    )
- "init-vterm")
+ "init-ghostel")
 
 ;; dirvish
 (lazy-load-global-keys

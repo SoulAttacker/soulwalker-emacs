@@ -1,9 +1,9 @@
-;;; init-awesome-tray.el --- awesome-tray config     -*- lexical-binding: t; -*-
+;;; init-ghostel.el --- ghostel configuration        -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2025  soulwalker
+;; Copyright (C) 2026  soulwalker
 
-;; Author: soulwalker
-;; Keywords: awesome-tray
+;; Author: soulwalker <soulwalker@Mac>
+;; Keywords:
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -24,20 +24,12 @@
 
 ;;; Code:
 
-(require 'awesome-tray)
+(require 'ghostel)
+(one-key-create-menu
+ "GTERM"
+ '(
+   (("t" . "Terminal Ghostel") . ghostel)
+   ))
 
-(defun custom-module-info ()
-  "Custom module information for awesome-tray"
-  "[Code is ART!]")
-
-(add-to-list 'awesome-tray-module-alist
-             '("custom" . (custom-module-info awesome-tray-pink-face)))
-
-(setq
- awesome-tray-active-modules '("location" "belong" "file-path" "mode-name" "date" "custom")
- awesome-tray-mode-line-height 0.1)
-
-(awesome-tray-mode 1)
-
-(provide 'init-awesome-tray)
-;;; init-awesome-tray.el ends here
+(provide 'init-ghostel)
+;;; init-ghostel.el ends here

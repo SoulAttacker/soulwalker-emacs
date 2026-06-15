@@ -55,14 +55,12 @@
               tab-width        4)
 
 ;; replace command key with meta key in mac
-(defconst *is-mac* (eq system-type 'darwin))
-(when t
-  (setq mac-command-modifier 'meta)
-  (setq mac-option-modifier 'super)
-  ;; (global-set-key (kbd "M-c") 'kill-ring-save) ; ⌘-c = Copy
-  ;; (global-set-key (kbd "M-v") 'yank) ; ⌘-v = Paste
-  (global-set-key (kbd "M-z") 'undo) ; ⌘-z = Undo
-  (global-set-key (kbd "≈") 'execute-extended-command)) ; Replace ≈ with whatever your option-x produces)
+(setq mac-command-modifier 'meta)
+(setq mac-option-modifier 'super)
+;; (global-set-key (kbd "M-c") 'kill-ring-save) ; ⌘-c = Copy
+;; (global-set-key (kbd "M-v") 'yank) ; ⌘-v = Paste
+(global-set-key (kbd "M-z") 'undo) ; ⌘-z = Undo
+(global-set-key (kbd "≈") 'execute-extended-command) ; Replace ≈ with whatever your option-x produces)
 
 ;; replace yes-or-no with y-or-n
 (defalias 'yes-or-no-p 'y-or-n-p)

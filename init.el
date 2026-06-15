@@ -26,6 +26,7 @@
 
 (require 'cl-lib)
 
+(setq warning-suppress-types '((files lexical-binding)))
 
 ;; setup custom file
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))

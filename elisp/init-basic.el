@@ -75,15 +75,16 @@
 
 (when (display-graphic-p)
   ;; Set default font
-  (cl-loop for font in '("Aporetic Sans Mono" "Maple Mono NF CN" "M+CodeLat50 Nerd Font Mono" "Pragmasevka" "FantasqueSansM Nerd Font Mono" "0xProto Nerd Font" "Retro Pixel Cute Mono"
-                         "Mx437 IBM VGA 9x16" "Victor Mono"  "Rec Mono Casual" "Cartograph CF" "Iosevka" "AnonymicePro Nerd Font" "CaskaydiaCove Nerd Font"
+  (cl-loop for font in '("FantasqueSansM Nerd Font Mono"
+                         "Aporetic Sans Mono" "Maple Mono NF CN" "M+CodeLat50 Nerd Font Mono" "Pragmasevka"  "0xProto Nerd Font" "Rec Mono Casual" "Retro Pixel Cute Mono"
+                         "Mx437 IBM VGA 9x16" "Victor Mono"   "Cartograph CF" "Iosevka" "AnonymicePro Nerd Font" "CaskaydiaCove Nerd Font"
                          "PT Mono" "Fira Code" "Jetbrains Mono Nerd Font"
                          "SF Mono" "Hack" "Source Code Pro" "Menlo"
                          "Monaco" "DejaVu Sans Mono" "CozetteVector")
            when (font-installed-p font)
            return (set-face-attribute 'default nil
                                       :family font
-                                      :height 130))
+                                      :height 180))
 
   ;; Specify font for all unicode characters
   (cl-loop for font in '("Segoe UI Symbol" "Symbola" "Symbol")
@@ -208,7 +209,7 @@ Returns the names of envvars that were changed."
           (vertical-scroll-bars . nil)
           (horizontal-scroll-bars . nil)
           (alpha . 100)))
-          ;; (alpha . 90)))
+  ;; (alpha . 90)))
 
   (setq x-gtk-use-system-tooltips nil)
   (setq x-gtk-resize-child-frames 'resize-mode))

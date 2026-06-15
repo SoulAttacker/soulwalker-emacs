@@ -259,3 +259,6 @@
 [submodule "package/hl-todo"]
 	path = package/hl-todo
 	url = https://github.com/tarsius/hl-todo.git
+[submodule "package/ghostel"]
+	path = package/ghostel
+	url = https://github.com/dakra/ghostel.git

@@ -30,7 +30,7 @@
    "CONSULT"
    '(
      (("c" . "Consult mode-command") . consult-mode-command)
-     (("d" . "Consult find") . consult-find)
+     (("d" . "Consult find") . consult-fd)
      (("e" . "Consult isearch-history") . consult-isearch-history)
      (("g" . "Consult goto-line") . consult-goto-line)
      (("h" . "Consult history") . consult-history)

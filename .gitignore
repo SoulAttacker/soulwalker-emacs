@@ -13,3 +13,4 @@ tramp
 .venv
 blink-search.db
 blink-search/
+.DS_Store

@@ -32,6 +32,7 @@
 (one-key-create-menu
  "PROJECT"
  '(
+   (("a" . "Porject add-project") . projectile-add-known-project)
    (("f" . "Project find-file") . projectile-find-file)
    (("p" . "Project personal config") . open-soulwalker-configuration)
    (("r" . "Project ripgrep") . projectile-ripgrep)
