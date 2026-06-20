@@ -72,6 +72,7 @@
                'typescript-ts-mode-hook
                'zig-mode-hook
                'zig-ts-mode-hook
+               'latex-mode-hook
                ))
   (add-hook hook #'(lambda () (fingertip-mode 1))))
 

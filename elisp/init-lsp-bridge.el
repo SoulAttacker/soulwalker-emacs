@@ -54,6 +54,7 @@
 
 (add-hook 'prog-mode-hook 'lsp-bridge-mode)
 (add-hook 'org-mode-hook 'lsp-bridge-mode)
+(add-hook 'latex-mode-hook 'lsp-bridge-mode)
 
 (one-key-create-menu
  "LSP"

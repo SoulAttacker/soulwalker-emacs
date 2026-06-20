@@ -34,13 +34,6 @@
 ;; yasnippet
 (add-hook 'prog-mode-hook 'yas-minor-mode)
 
-;; latex
-(add-hook 'prog-mode-hook 'latex-mode)
-
-;; yasnippet-snippets
-;; (with-eval-after-load 'yas-minor-mode
-;;   (require 'yasnippet-snippets))
-
 ;; flycheck
 (when (eq soulwalker-static-check-backend 'flycheck)
   (require 'flycheck)
