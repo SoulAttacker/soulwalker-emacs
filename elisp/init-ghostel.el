@@ -25,10 +25,16 @@
 ;;; Code:
 
 (require 'ghostel)
+
+(defun ghostel-other-window ()
+  (interactive)
+  (split-window-below)
+  (ghostel))
+
 (one-key-create-menu
  "GTERM"
  '(
-   (("t" . "Terminal Ghostel") . ghostel)
+   (("t" . "Terminal Ghostel") . ghostel-other-window)
    ))
 
 (provide 'init-ghostel)
