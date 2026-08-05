@@ -28,8 +28,9 @@
 
 (defun ghostel-other-window ()
   (interactive)
-  (split-window-below)
-  (ghostel))
+  (let ((win (split-window-below)))
+    (with-selected-window win
+      (ghostel))))
 
 (one-key-create-menu
  "GTERM"
