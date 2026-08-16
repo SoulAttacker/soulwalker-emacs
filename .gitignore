@@ -14,3 +14,4 @@ tramp
 blink-search.db
 blink-search/
 .DS_Store
+./lsp-bridge/
