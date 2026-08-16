@@ -30,16 +30,17 @@
   (setq
    lsp-bridge-python-command soulwalker-default-python
 
-   lsp-bridge-python-lsp-server 'basedpyright
+   lsp-bridge-python-lsp-server 'ty
+   lsp-bridge-python-multi-lsp-server 'ty_ruff
    lsp-bridge-c-lsp-server 'clangd
 
    lsp-bridge-enable-diagnostics t
    lsp-bridge-enable-hover-diagnostic t
-   lsp-bridge-enable-org-babel t
+   lsp-bridge-enable-org-babel nil
    lsp-bridge-enable-completion-in-string t
    lsp-bridge-enable-signature-help t
    lsp-bridge-enable-competion-in-minibuffer t
-   lsp-bridge-completion-obey-trigger-characters-p nil
+   lsp-bridge-completion-obey-trigger-characters-p t
    lsp-bridge-semantic-tokens-mode t
 
    acm-enable-doc t
@@ -49,7 +50,9 @@
    acm-enable-search-file-words t
    acm-enable-yas t
    acm-backend-lsp-enable-auto-import t
-   acm-enable-preview nil
+   acm-enable-preview t
+   acm-enable-telega nil
+   ;; acm-backend-lsp-match-mode "prefixCaseSensitive"
    ))
 
 (add-hook 'prog-mode-hook 'lsp-bridge-mode)

@@ -34,38 +34,126 @@
    ((eq soulwalker-completion-mechanism 'vertico)
     (ido-find-file-in-dir user-emacs-directory))))
 
+(defvar soulwalker/original-python-path nil)
+(defvar soulwalker/original-exec-path nil)
+
+(defun soulwalker/uv-deactivate ()
+  "Deactivate current Python virtual environment."
+  (interactive)
+
+  (when soulwalker/original-python-path
+    (setenv "PATH" soulwalker/original-python-path))
+
+  (when soulwalker/original-exec-path
+    (setq exec-path soulwalker/original-exec-path))
+
+  (setq soulwalker/original-python-path nil)
+  (setq soulwalker/original-exec-path nil)
+
+  (setenv "VIRTUAL_ENV" nil)
+  (setenv "PYTHONHOME" nil)
+
+  (setq python-shell-interpreter "python")
+
+  (message "Python virtual environment deactivated"))
+
+;; (defun soulwalker/uv-activate ()
+;;   "Activate nearest .venv Python environment from current directory upward."
+;;   (interactive)
+;;   (let* ((start-dir default-directory)
+;;          (venv-root (locate-dominating-file start-dir ".venv")))
+;;     (if (not venv-root)
+;;         (error "No .venv found upward from %s" start-dir)
+;;       (let* ((venv-path (expand-file-name ".venv" venv-root))
+;;              (python-path (expand-file-name
+;;                            (if (eq system-type 'windows-nt)
+;;                                "Scripts/python.exe"
+;;                              "bin/python")
+;;                            venv-path)))
+;;         (if (file-exists-p python-path)
+;;             (progn
+;;               (setq python-shell-interpreter python-path)
+
+;;               (let ((venv-bin-dir (file-name-directory python-path)))
+;;                 (setq exec-path
+;;                       (cons venv-bin-dir
+;;                             (remove venv-bin-dir exec-path))))
+
+;;               (setenv "PATH"
+;;                       (concat (file-name-directory python-path)
+;;                               path-separator
+;;                               (getenv "PATH")))
+
+;;               (setenv "VIRTUAL_ENV" venv-path)
+;;               (setenv "PYTHONHOME" nil)
+
+;;               (message "Activated UV Python environment at %s" venv-path))
+;;           (error "No python executable found in %s" venv-path))))))
+
+
 (defun soulwalker/uv-activate ()
   "Activate nearest .venv Python environment from current directory upward."
   (interactive)
+
+  ;; If a virtual environment is already active, deactivate it first.
+  (when (getenv "VIRTUAL_ENV")
+    (soulwalker/uv-deactivate))
+
   (let* ((start-dir default-directory)
          (venv-root (locate-dominating-file start-dir ".venv")))
+
     (if (not venv-root)
         (error "No .venv found upward from %s" start-dir)
+
       (let* ((venv-path (expand-file-name ".venv" venv-root))
-             (python-path (expand-file-name
-                           (if (eq system-type 'windows-nt)
-                               "Scripts/python.exe"
-                             "bin/python")
-                           venv-path)))
-        (if (file-exists-p python-path)
-            (progn
-              (setq python-shell-interpreter python-path)
+             (python-path
+              (expand-file-name
+               (if (eq system-type 'windows-nt)
+                   "Scripts/python.exe"
+                 "bin/python")
+               venv-path))
+             (venv-bin-dir
+              (file-name-directory python-path)))
 
-              (let ((venv-bin-dir (file-name-directory python-path)))
-                (setq exec-path
-                      (cons venv-bin-dir
-                            (remove venv-bin-dir exec-path))))
+        (if (not (file-exists-p python-path))
+            (error "No python executable found in %s" venv-path)
 
-              (setenv "PATH"
-                      (concat (file-name-directory python-path)
-                              path-separator
-                              (getenv "PATH")))
+          ;; Save the original environment before modifying it.
+          (setq soulwalker/original-python-path
+                (getenv "PATH"))
 
-              (setenv "VIRTUAL_ENV" venv-path)
-              (setenv "PYTHONHOME" nil)
+          (setq soulwalker/original-exec-path
+                (copy-sequence exec-path))
 
-              (message "Activated UV Python environment at %s" venv-path))
-          (error "No python executable found in %s" venv-path))))))
+          ;; Python interpreter used by python.el.
+          (setq python-shell-interpreter python-path)
+
+          ;; Put .venv/bin at the front of exec-path.
+          (setq exec-path
+                (cons venv-bin-dir
+                      (remove venv-bin-dir exec-path)))
+
+          ;; Put .venv/bin at the front of PATH.
+          (setenv "PATH"
+                  (concat venv-bin-dir
+                          path-separator
+                          (getenv "PATH")))
+
+          ;; Set virtual environment variables.
+          (setenv "VIRTUAL_ENV" venv-path)
+          (setenv "PYTHONHOME" nil)
+
+          (message "Activated UV Python environment at %s"
+                   venv-path))))))
+
+
+(defun soulwalker/uv-current-environment ()
+  "Display the currently active Python environment."
+  (interactive)
+
+  (if-let ((venv (getenv "VIRTUAL_ENV")))
+      (message "Current Python environment: %s" venv)
+    (message "No Python virtual environment is active.")))
 
 (defun is-hyprland ()
   "Check if Emacs is running under the Hyprland Wayland compositor."

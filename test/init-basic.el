@@ -200,5 +200,40 @@ Returns the names of envvars that were changed."
 ;; (global-hl-line-mode)
 
 
+(defun soulwalker/uv-activate ()
+  "Activate nearest .venv Python environment from current directory upward."
+  (interactive)
+  (let* ((start-dir default-directory)
+         (venv-root (locate-dominating-file start-dir ".venv")))
+    (if (not venv-root)
+        (error "No .venv found upward from %s" start-dir)
+      (let* ((venv-path (expand-file-name ".venv" venv-root))
+             (python-path (expand-file-name
+                           (if (eq system-type 'windows-nt)
+                               "Scripts/python.exe"
+                             "bin/python")
+                           venv-path)))
+        (if (file-exists-p python-path)
+            (progn
+              (setq python-shell-interpreter python-path)
+
+              (let ((venv-bin-dir (file-name-directory python-path)))
+                (setq exec-path
+                      (cons venv-bin-dir
+                            (remove venv-bin-dir exec-path))))
+
+              (setenv "PATH"
+                      (concat (file-name-directory python-path)
+                              path-separator
+                              (getenv "PATH")))
+
+              (setenv "VIRTUAL_ENV" venv-path)
+              (setenv "PYTHONHOME" nil)
+
+              (message "Activated UV Python environment at %s" venv-path))
+          (error "No python executable found in %s" venv-path))))))
+
+(add-hook 'python-mode-hook #'soulwalker/uv-activate)
+
 (provide 'init-basic)
 ;;; init-basic.el ends here

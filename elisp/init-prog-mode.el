@@ -24,7 +24,6 @@
 
 ;;; Code:
 
-(require 'symbol-overlay)
 (require 'yasnippet)
 (require 'init-todo)
 
@@ -52,9 +51,6 @@
 (when (eq soulwalker-static-check-backend 'flymake)
   (require 'flymake)
   (add-hook 'prog-mode-hook 'flymake-mode))
-
-;; symbol-overlay
-(add-hook 'prog-mode-hook 'symbol-overlay-mode)
 
 ;; hl-todo
 (add-hook 'prog-mode-hook 'hl-todo-mode)

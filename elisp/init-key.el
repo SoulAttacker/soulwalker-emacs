@@ -203,5 +203,13 @@
    )
  "init-magit")
 
+;; symbol-overlay
+(lazy-load-unset-keys '("M-s"))
+(lazy-load-global-keys
+ '(
+   ("M-s" . symbol-overlay-put)
+   )
+ "init-symbol-overlay")
+
 (provide 'init-key)
 ;;; init-key.el ends here

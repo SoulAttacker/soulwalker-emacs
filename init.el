@@ -56,6 +56,7 @@
     (require 'init-awesome-tray)
     (require 'init-one-key)
     (require 'init-key)
+    (require 'init-terminal)
 
 
     ;; load after 1 second
